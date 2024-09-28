@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página web de fans dedicada a Violeta, una artista emergente española.">
+    <title>VIOLETA - Noticias</title>
+
+    <link rel="stylesheet" href="css/noticias.css">
+    <link rel="stylesheet" href="css/lunarTrail.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="icon" href="assets/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" crossorigin=""/>
+</head>
+<body id="top">
+
+<!-- Header con navegación responsive -->
+<header>
+    <div class="logo">
+        <img src="assets/logo-violeta.png" alt="VIOLETA Logo">
+    </div>
+    <nav>
+        <button class="menu-toggle" aria-label="Abrir Menú">
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+        </button>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="biografia.html">Biografía</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="musica.html">Música</a></li>
+            <li><a href="gira.html">Gira</a></li>
+            <li><a href="proximamente.html">Zona Fans</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/violetahodar" target="_blank">
+            <img src="assets/instagram-icon.png" alt="Instagram">
+        </a>
+        <a href="https://x.com/HFVioleta" target="_blank">
+            <img src="assets/twitter-icon.png" alt="Twitter">
+        </a>
+        <a href="https://www.tiktok.com/@hodarvioleta" target="_blank">
+            <img src="assets/tiktok-icon.png" alt="TikTok">
+        </a>
+        <a href="https://whatsapp.com/channel/0029VajuudwBqbrGLRqDPw2P" target="_blank">
+            <img src="assets/whatsapp-icon.png" alt="WhatsApp">
+        </a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Noticias y Entrevistas</h1>
+        <p>Descubre las últimas novedades y entrevistas de Violeta.</p>
+    </div>
+</section>
+
+   <!-- Sección de Noticias -->
+   <section class="news-section">
+    <div class="news-container">
+
+        <!-- Noticia 1 -->
+        <div class="news-card">
+            <img src="assets/noticia1.jpg" alt="Noticia 1">
+            <div class="news-content">
+                <h2>Cultura Inquieta</h2>
+                <p>Así vivimos, un año más, el festival Coca-Cola Music Experience</p>
+                <a href="https://culturainquieta.com/musica/asi-vivimos-un-ano-mas-el-festival-coca-cola-music-experience/" target="_blank" class="btn-read-more">Leer más</a>
+            </div>
+        </div>
+
+        <!-- Noticia 2 -->
+        <div class="news-card">
+            <img src="assets/noticia2.jpg" alt="Noticia 2">
+            <div class="news-content">
+                <h2>Europa FM</h2>
+                <p>Violeta, pura dualidad en su búsqueda por la 'Libertá'</p>
+                <a href="https://www.europafm.com/noticias/musica/violeta-pura-dualidad-busqueda-liberta_2024083066d18af2797ae1000121b92b.html" target="_blank" class="btn-read-more">Leer más</a>
+            </div>
+        </div>
+
+        <!-- Noticia 3 -->
+        <div class="news-card">
+            <img src="assets/noticia3.jpg" alt="Noticia 3">
+            <div class="news-content">
+                <h2>Granada Hoy</h2>
+                <p>Violeta Hódar: "Los discursos de odio siguen aumentando y causan cientos de agresiones"</p>
+                <a href="https://www.granadahoy.com/ocio/violeta-hodar-ot-pregonera-orgullo_0_2001282823.html" target="_blank" class="btn-read-more">Leer más</a>
+            </div>
+        </div>
+
+        <!-- Noticia 4 -->
+        <div class="news-card">
+            <img src="assets/noticia4.jpg" alt="Noticia 4">
+            <div class="news-content">
+                <h2>Los 40</h2>
+                <p>Violeta Hódar de OT 2023 desembarca en Miami para grabar nueva música: ¿Qué otros concursantes de Operación Triunfo hicieron lo mismo?</p>
+                <a href="https://los40.com/2024/06/05/violeta-hodar-de-ot-2023-desembarca-en-miami-para-grabar-nueva-musica-que-otros-concursantes-de-operacion-triunfo-hicieron-lo-mismo/" target="_blank" class="btn-read-more">Leer más</a>
+            </div>
+        </div>
+
+        <!-- Noticia 5 -->
+        <div class="news-card">
+            <img src="assets/noticia5.jpg" alt="Noticia 5">
+            <div class="news-content">
+                <h2>Folie</h2>
+                <p>VIOLETA HÓDAR: “La gente no se da cuenta que somos niños de 20 años y pasamos de cero al todo”</p>
+                <a href="https://www.folie.es/post/cover-story-violeta-hodar" target="_blank" class="btn-read-more">Leer más</a>
+            </div>
+        </div>
+
+        <!-- Noticia 6 -->
+        <div class="news-card">
+            <img src="assets/noticia6.jpg" alt="Noticia 6">
+            <div class="news-content">
+                <h2>El País</h2>
+                <p>Violeta Hódar: “En Operación Triunfo la presión es muy bestia y la experiencia es muy dura”</p>
+                <a href="https://elpais.com/cultura/branded/stay-true-records/2024-04-11/violeta-hodar-en-operacion-triunfo-la-presion-es-muy-bestia-y-la-experiencia-es-muy-dura.html" target="_blank" class="btn-read-more">Leer más</a>
+            </div>
+        </div>
+
+        <!-- Noticia 7 -->
+        <div class="news-card">
+            <img src="assets/noticia7.jpg" alt="Noticia 7">
+            <div class="news-content">
+                <h2>Vanidad</h2>
+                <p>VIOLETA HÓDAR: «El rumbo de Violeta lo dictará el corazón»</p>
+                <a href="https://vanidad.es/people/264244379/violeta-hodar-ot-entrevista-vanidad.html" target="_blank" class="btn-read-more">Leer más</a>
+            </div>
+        </div>
+
+        <!-- Noticia 8 -->
+        <div class="news-card">
+            <img src="assets/noticia8.jpg" alt="Noticia 8">
+            <div class="news-content">
+                <h2>Info Costa Tropical</h2>
+                <p>Violeta Hodar protagoniza un momento único al recibir el Premio Igualdad y Nuevos Valores de Motril</p>
+                <a href="https://www.infocostatropical.com/noticia.asp?id_noticia=105986" target="_blank" class="btn-read-more">Leer más</a>
+            </div>
+        </div>
+
+        <!-- Noticia 9 -->
+        <div class="news-card">
+            <img src="assets/noticia9.jpg" alt="Noticia 9">
+            <div class="news-content">
+                <h2>Vein</h2>
+                <p>Violeta Hódar: «‘el x venir’ abre la puerta a una nueva vida y una nueva yo»</p>
+                <a href="https://vein.es/violeta-hodar-el-x-venir-abre-la-puerta-a-una-nueva-vida-y-una-nueva-yo/" class="btn-read-more">Leer más</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Footer con enlaces y redes sociales -->
+<footer>
+    <div class="footer-content">
+        <p>© 2024 VIOLETA - Fanpage</p>
+    </div>
+    <div class="footer-page">
+        <!-- <a href="https://violetaoficial.com" target="_blank">Página Oficial</a> -->
+        Página Oficial
+    </div>
+    <div class="footer-social-icons">
+        <a href="https://www.instagram.com/violetahodar" target="_blank">
+            <img src="assets/instagram-icon.png" alt="Instagram">
+        </a>
+        <a href="https://x.com/HFVioleta" target="_blank">
+            <img src="assets/twitter-icon.png" alt="Twitter">
+        </a>
+        <a href="https://www.tiktok.com/@hodarvioleta" target="_blank">
+            <img src="assets/tiktok-icon.png" alt="TikTok">
+        </a>
+        <a href="https://whatsapp.com/channel/0029VajuudwBqbrGLRqDPw2P" target="_blank">
+            <img src="assets/whatsapp-icon.png" alt="WhatsApp">
+        </a>
+    </div>
+</footer>
+
+    <script src="js/nav.js"></script>
+    <script src="js/lunarTrail.js" defer></script>
+</body>
+</html>

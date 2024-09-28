@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página web de fans dedicada a Violeta, una artista emergente española.">
+    <title>VIOLETA - Gira</title>
+
+    <link rel="stylesheet" href="css/gira.css">
+    <link rel="stylesheet" href="css/lunarTrail.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="icon" href="assets/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" crossorigin=""/>
+</head>
+<body id="top">
+
+<!-- Header con navegación responsive -->
+<header>
+    <div class="logo">
+        <img src="assets/logo-violeta.png" alt="VIOLETA Logo">
+    </div>
+    <nav>
+        <button class="menu-toggle" aria-label="Abrir Menú">
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+        </button>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="biografia.html">Biografía</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="musica.html">Música</a></li>
+            <li><a href="gira.html">Gira</a></li>
+            <li><a href="proximamente.html">Zona Fans</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/violetahodar" target="_blank">
+            <img src="assets/instagram-icon.png" alt="Instagram">
+        </a>
+        <a href="https://x.com/HFVioleta" target="_blank">
+            <img src="assets/twitter-icon.png" alt="Twitter">
+        </a>
+        <a href="https://www.tiktok.com/@hodarvioleta" target="_blank">
+            <img src="assets/tiktok-icon.png" alt="TikTok">
+        </a>
+        <a href="https://whatsapp.com/channel/0029VajuudwBqbrGLRqDPw2P" target="_blank">
+            <img src="assets/whatsapp-icon.png" alt="WhatsApp">
+        </a>
+    </div>
+</header>
+
+<!-- Introducción de la gira (similar a Hero Section) -->
+<section class="hero-gira">
+    <div class="hero-gira-overlay"></div>
+    <div class="hero-gira-text">
+        <h1>GIRA</h1>
+        <p>¡Conoce los lugares que visitará y no te pierdas la oportunidad de asistir!</p>
+    <!-- <a href="https://violeta-entradas.com" class="cta-button">Compra tus entradas</a> -->
+    </div>
+</section>
+
+<section class="proximamente">
+    <h1 class="titulo-proximamente">¡PRÓXIMAMENTE!</h1>
+    <h2 class="subtitulo-proximamente">Recuerda:</h2>
+    <h2 class="subtitulo-proximamente">See you soon!</h2>
+    <div class="circulo-giratorio"></div>
+</section>
+
+
+
+
+
+<!-- Mapa interactivo -->
+<!--
+<section class="mapa-gira" >
+    <h2>MAPA DE LA GIRA</h2>
+    <div id="mapa-gira" class="mapa-container"></div>
+</section>
+-->
+<!-- Listado de fechas -->
+ <!--
+<section class="listado-conciertos">
+    <h2>PRÓXIMOS CONCIERTOS</h2>
+    <ul>
+        <li>
+            <div class="concierto-header">
+                <span><strong>Madrid</strong> - 2 de noviembre de 2024</span>
+                <a href="https://compra-entradas.com/madrid2024" class="cta-button">Comprar entradas</a>
+            </div>
+            <p class="sala-concierto">Sala Apolo</p>
+        </li>
+        <li>
+            <div class="concierto-header">
+                <span><strong>Granada</strong> - 10 de noviembre de 2024</span>
+                <a href="https://compra-entradas.com/granada2024" class="cta-button">Comprar entradas</a>
+            </div>
+            <p class="sala-concierto">Sala Marte</p>
+        </li>
+        <li>
+            <div class="concierto-header">
+                <span><strong>Barcelona</strong> - 15 de diciembre de 2024</span>
+                <a href="https://compra-entradas.com/barcelona2024-1" class="cta-button">Comprar entradas</a>
+            </div>
+            <p class="sala-concierto">Razzmatazz 1</p>
+        </li>
+        <li>
+            <div class="concierto-header">
+                <span><strong>Barcelona</strong> - 16 de diciembre de 2024</span>
+                <a href="https://compra-entradas.com/barcelona2024-2" class="cta-button">Comprar entradas</a>
+            </div>
+            <p class="sala-concierto">Razzmatazz 1</p>
+        </li>
+        <li>
+            <div class="concierto-header">
+                <span><strong>Tenerife</strong> - 20 de diciembre de 2024</span>
+                <a href="https://compra-entradas.com/tenerife2024" class="cta-button">Comprar entradas</a>
+            </div>
+            <p class="sala-concierto">Sala Cabildo</p>
+        </li>
+    </ul>
+</section>
+-->
+<!-- Conciertos Anteriores-->
+<section id="conciertos-pasados" class="section-conciertos-pasados">
+    <h2>CONCIERTOS ANTERIORES</h2>
+    <div class="contenedor-video">
+        <h3 class="lugar-concierto">Coca Cola Music Experience - Madrid</h3> <!-- Lugar del concierto -->
+        <iframe width="100%" height="400" src="https://www.youtube.com/embed/rxPVFP180Bo" 
+                title="Violeta - Coca Cola Music Experience Madrid 2024" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+        <p class="fecha-concierto">14 de Septiembre de 2024</p> <!-- Fecha del concierto -->
+    </div>
+</section>
+
+<!-- Footer con enlaces y redes sociales -->
+<footer>
+    <div class="footer-content">
+        <p>© 2024 VIOLETA - Fanpage</p>
+    </div>
+    <div class="footer-page">
+        <!-- <a href="https://violetaoficial.com" target="_blank">Página Oficial</a> -->
+        Página Oficial
+    </div>
+    <div class="footer-social-icons">
+        <a href="https://www.instagram.com/violetahodar" target="_blank">
+            <img src="assets/instagram-icon.png" alt="Instagram">
+        </a>
+        <a href="https://x.com/HFVioleta" target="_blank">
+            <img src="assets/twitter-icon.png" alt="Twitter">
+        </a>
+        <a href="https://www.tiktok.com/@hodarvioleta" target="_blank">
+            <img src="assets/tiktok-icon.png" alt="TikTok">
+        </a>
+        <a href="https://whatsapp.com/channel/0029VajuudwBqbrGLRqDPw2P" target="_blank">
+            <img src="assets/whatsapp-icon.png" alt="WhatsApp">
+        </a>
+    </div>
+</footer>
+
+<script src="js/nav.js"></script>
+<!-- Leaflet JS para el mapa interactivo -->
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" crossorigin=""></script>
+
+<!-- Script para generar el mapa interactivo -->
+<script>
+    const map = L.map('mapa-gira', {
+        center: [37.177336, -2.92528],
+        zoom: 5,
+        minZoom: 3, // Limitar el zoom mínimo
+        maxZoom: 10 // Limitar el zoom máximo
+    });
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
+        maxZoom: 10,
+    }).addTo(map);
+
+    // Conciertos confirmados con latitud, longitud, fecha y ciudad
+    const conciertosGira = [
+        { nombre: "Madrid", fecha: "2 de noviembre de 2024", lat: 40.416775, lng: -3.703790 },
+        { nombre: "Granada", fecha: "10 de noviembre de 2024", lat: 37.177336, lng: -3.598557 },
+        { nombre: "Barcelona", fecha: "15 de diciembre de 2024", lat: 41.38879, lng: 2.15899 },
+        { nombre: "Barcelona", fecha: "16 de diciembre de 2024", lat: 41.3828939, lng: 2.1774322 },
+        { nombre: "Tenerife", fecha: "20 de diciembre de 2024", lat: 28.291564, lng: -16.629130 },
+    ];
+
+    // Añadir marcadores al mapa con las ciudades y fechas
+    conciertosGira.forEach(concierto => {
+        L.marker([concierto.lat, concierto.lng]).addTo(map)
+            .bindPopup(`<b>${concierto.nombre}</b><br>${concierto.fecha}`)
+            .openPopup();
+    });
+</script>
+
+<script src="js/lunarTrail.js" defer></script>
+</body>
+</html>

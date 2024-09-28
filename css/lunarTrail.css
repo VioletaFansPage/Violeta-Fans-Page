@@ -1,0 +1,11 @@
+/* lunarTrail.css */
+.lunar-trail {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.5); /* Color blanco con opacidad */
+    border-radius: 50%; /* Hacerlo redondo */
+    pointer-events: none; /* Evitar que los eventos del mouse interactúen con el rastro */
+    transform: translate(-50%, -50%); /* Centrar el rastro en el cursor */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Sombra para un efecto brillante */
+}

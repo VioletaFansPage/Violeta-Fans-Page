@@ -1,0 +1,211 @@
+/* Variables de color */
+:root {
+    --azul-oscuro: #1a2b4e; /* Azul oscuro para fondos */
+    --azul-claro: #dfe9f3; /* Azul casi blanco para textos */
+    --azul-resaltado: #a1c9f4; /* Azul resaltado para hover y elementos destacados */
+    --blanco: #fff; /* Blanco puro para contrastes */
+}
+
+
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        left: 0; /* Asegúrate de que el menú se estire de un lado al otro */
+        background: var(--azul-oscuro);
+        width: 100%; /* Asegúrate de que ocupe todo el ancho */
+        top: 60px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        z-index: 10; /* Mantener por encima del hero */
+        padding: 0; /* Asegúrate de que no haya padding que afecte el ancho */
+        margin: 0; /* Elimina márgenes que puedan reducir el ancho */
+    }
+
+    nav ul.show {
+        max-height: 500px; /* Ajusta esto según sea necesario */
+    }
+
+    .menu-toggle {
+        display: flex;
+        z-index: 11; /* Asegúrate de que el botón también esté por encima */
+    }
+}
+
+/* Hero Contacto */
+.hero-contacto {
+    background-color: var(--azul-claro);
+    padding: 65px;
+    text-align: center;
+    color: var(--azul-oscuro);
+}
+
+.hero-contacto h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.hero-contacto p {
+    font-size: 1.5rem;
+    margin-bottom: 35px;
+}
+
+/* Estilo para el formulario */
+.contact-form {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: center; /* Centra el formulario */
+    max-width: 400px; /* Limita el ancho máximo del formulario */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+}
+
+.contact-form label {
+    margin-bottom: 10px; /* Espacio entre la etiqueta y el campo */
+    text-align: left; /* Alinea el texto de las etiquetas a la izquierda */
+    font-weight: bold; /* Pone las etiquetas en negrita */
+    font-size: 1.2rem; /* Tamaño de fuente */
+}
+
+/* Estilos para el select del asunto */
+.contact-form select {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espacio entre los campos */
+    border: 1px solid var(--azul-oscuro); /* Borde del campo */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+}
+
+/* Estilos para inputs y textareas */
+.contact-form input,
+.contact-form textarea {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espacio entre los campos */
+    border: 1px solid var(--azul-oscuro); /* Borde del campo */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+}
+
+/* Estilo uniforme para los placeholders de todos los inputs y textareas */
+::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--azul-oscuro); /* Cambia este color si prefieres otro */
+    opacity: 0.6; /* Opacidad para el placeholder */
+    font-size: 1rem; /* Tamaño de la fuente */
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-family: 'Montserrat', sans-serif; /* Asegura que todos usen la misma tipografía */
+    color: var(--azul-oscuro); /* Color placeholder */
+    opacity: 0.6; /* Ajusta la opacidad si es necesario */
+    font-size: 1rem; /* Tamaño uniforme */
+}
+
+/* Estilo del cuadro de mensaje (modal) */
+.message-box {
+    background-color: var(--azul-resaltado);
+    color: var(--blanco);
+    padding: 20px;
+    border-radius: 5px;
+    position: fixed; /* Fijo en la pantalla */
+    top: 40%; /* Ajustar a 40% para moverlo más arriba */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%); /* Centrado completo */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    width: 300px; /* Ancho fijo del modal */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para el modal */
+}
+
+/* Fondo semi-transparente para el modal */
+.message-box::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+    z-index: -1; /* Detrás del mensaje */
+}
+
+.message-box button {
+    background-color: transparent;
+    border: none;
+    color: var(--blanco);
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Centra los iconos horizontalmente */
+    gap: 15px; /* Espacio entre los iconos */
+}
+
+.social-icons span {
+    font-size: 1.2rem; /* Ajusta el tamaño de la frase */
+    color: var(--azul-oscuro); /* Color de la frase */
+}
+
+/* FAQ section */
+.faq-section {
+    margin: 50px auto;
+    width: 80%;
+    max-width: 900px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0;
+}
+
+.faq-question {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 0;
+    color: var(--azul-claro);
+}
+
+.faq-question:hover {
+    color: var(--azul-resaltado); /* Color principal de la página */
+}
+
+.faq-answer {
+    display: none;
+    padding-top: 10px;
+}
+
+.faq-answer p {
+    font-size: 16px;
+    color: var(--azul-claro);
+}
+
+.faq-answer a {
+    text-decoration: none;
+    color: var(--azul-claro);
+}
+
+/* Añadimos animación para el despliegue */
+.faq-answer.show {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

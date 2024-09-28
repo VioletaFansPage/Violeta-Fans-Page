@@ -1,0 +1,198 @@
+/* Variables de color */
+:root {
+    --azul-oscuro: #1a2b4e; /* Azul oscuro para fondos */
+    --azul-claro: #dfe9f3; /* Azul casi blanco para textos */
+    --azul-resaltado: #a1c9f4; /* Azul resaltado para hover y elementos destacados */
+    --blanco: #fff; /* Blanco puro para contrastes */
+}
+
+
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        left: 0; /* Asegúrate de que el menú se estire de un lado al otro */
+        background: var(--azul-oscuro);
+        width: 100%; /* Asegúrate de que ocupe todo el ancho */
+        top: 60px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        z-index: 10; /* Mantener por encima del hero */
+        padding: 0; /* Asegúrate de que no haya padding que afecte el ancho */
+        margin: 0; /* Elimina márgenes que puedan reducir el ancho */
+    }
+
+    nav ul.show {
+        max-height: 500px; /* Ajusta esto según sea necesario */
+    }
+
+    .menu-toggle {
+        display: flex;
+        z-index: 11; /* Asegúrate de que el botón también esté por encima */
+    }
+}
+
+/* Hero Section Biografía */
+.hero {
+    background-image: url('../assets/violeta-hero.jpg'); /* Imagen de fondo de la artista */
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    position: relative;
+}
+
+.hero-text {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+/* Recuadro blanco de la biografía */
+.biografia {
+    background-color: rgba(223, 233, 243, 0.6); /* Fondo blanco con un poco de transparencia */
+    padding: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    color: var(--azul-oscuro);
+}
+
+.biografia p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+/* Adaptación responsiva */
+@media (max-width: 768px) {
+    .biografia {
+        padding: 30px;
+    }
+}
+
+/* Sección de Datos Curiosos */
+.datos-curiosos {
+    background-color: var(--azul-claro);
+    padding: 50px;
+    text-align: center;
+}
+
+.datos-curiosos h2 {
+    font-size: 2rem;
+    color: var(--azul-oscuro);
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.datos-curiosos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cambia de 3 a 4 */
+    gap: 30px;
+}
+
+.curiosidad {
+    text-align: center;
+}
+
+.curiosidad-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.curiosidad h3 {
+    font-size: 1.5rem;
+    color: var(--azul-oscuro);
+    margin-bottom: 10px;
+}
+
+.curiosidad p {
+    font-size: 1rem;
+    color: var(--azul-oscuro);
+    line-height: 1.6;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 1024px) {
+    .datos-curiosos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .datos-curiosos-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Estilos para la sección de galería */
+.galeria {
+    background-color: var(--azul-claro); /* Fondo suave */
+    padding: 50px 20px;
+}
+
+.galeria h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--azul-oscuro);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* Estilos de la galería de imágenes */ 
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas automáticas por defecto */
+    gap: 15px; /* Espacio entre las imágenes */
+    padding: 20px 0;
+}
+
+.grid-gallery img {
+    width: 100%;
+    height: auto; /* Para mantener la relación de aspecto */
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    object-fit: cover; /* Para asegurarse de que las imágenes se ajusten bien */
+    transition: transform 0.3s ease; /* Para un efecto en hover */
+}
+
+/* Efecto al pasar el ratón sobre las imágenes */
+.grid-gallery img:hover {
+    transform: scale(1.05); /* Zoom suave */
+}
+
+/* Media Queries para responsividad */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .grid-gallery {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en tablets */
+    }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+    .grid-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles */
+    }
+}
+
+/* Pantallas más pequeñas (opcional) */
+@media (max-width: 480px) {
+    .grid-gallery {
+        grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+    }
+}

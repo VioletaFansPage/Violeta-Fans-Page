@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página web de fans dedicada a Violeta, una artista emergente española.">
+    <title>VIOLETA - Música</title>
+
+    <link rel="stylesheet" href="css/musica.css">
+    <link rel="stylesheet" href="css/lunarTrail.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="icon" href="assets/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" crossorigin=""/>
+</head>
+<body id="top">
+
+<!-- Header con navegación responsive -->
+<header>
+    <div class="logo">
+        <img src="assets/logo-violeta.png" alt="VIOLETA Logo">
+    </div>
+    <nav>
+        <button class="menu-toggle" aria-label="Abrir Menú">
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+        </button>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="biografia.html">Biografía</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="musica.html">Música</a></li>
+            <li><a href="gira.html">Gira</a></li>
+            <li><a href="proximamente.html">Zona Fans</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/violetahodar" target="_blank">
+            <img src="assets/instagram-icon.png" alt="Instagram">
+        </a>
+        <a href="https://x.com/HFVioleta" target="_blank">
+            <img src="assets/twitter-icon.png" alt="Twitter">
+        </a>
+        <a href="https://www.tiktok.com/@hodarvioleta" target="_blank">
+            <img src="assets/tiktok-icon.png" alt="TikTok">
+        </a>
+        <a href="https://whatsapp.com/channel/0029VajuudwBqbrGLRqDPw2P" target="_blank">
+            <img src="assets/whatsapp-icon.png" alt="WhatsApp">
+        </a>
+    </div>
+</header>
+
+<!-- Hero Sección Música con imagen de fondo -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>MÚSICA</h1>
+        <p>Descubre los sencillos más recientes de Violeta. Escucha sus canciones y visualiza sus videoclips.</p>
+    </div>
+</section>
+
+    <!-- Contenedor principal de los singles -->
+    <section class="music-section">
+        <!-- Single 1 -->
+        <div class="single-container">
+            <h2>LIBERTÁ</h2>
+            <!-- Spotify Embed -->
+            <div class="spotify">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6afspjTp6s1QucDHVKPDss?utm_source=generator" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div class="song-details">
+                <!-- Youtube Video -->
+                <div class="youtube">
+                    <iframe width="100%" height="180" src="https://www.youtube.com/embed/KC9TmTus1Cc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <!-- Otras plataformas -->
+                <div class="enlaces-plataformas">
+                    <p>Otras plataformas:</p>
+                    <div class="plataformas">
+                        <a href="https://music.apple.com/ae/album/libert%C3%A1/1762003446" target="_blank"><img src="assets/Apple_Music.png" alt="Apple Music"></a>
+                        <a href="https://music.amazon.es/tracks/B0DDZWF9G8" target="_blank"><img src="assets/Amazon Music.png" alt="Amazon Music"></a>
+                        <a href="https://deezer.page.link/scVKmFZPD5656TVX6" target="_blank"><img src="assets/Deezer.png" alt="Deezer"></a>
+                        <a href="https://tidal.com/browse/track/382846340" target="_blank"><img src="assets/Tidal.png" alt="Tidal"></a>
+                        <a href="https://www.shazam.com/track/712446812/libert%C3%A1" target="_blank"><img src="assets/Shazam.png" alt="Shazam"></a>
+                        <a href="https://soundcloud.com/violetahodar/liberta" target="_blank"><img src="assets/SoundCloud.png" alt="SoundCloud"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Repetir para los otros singles -->
+        <div class="single-container">
+            <h2>El Parque ft. Chiara Oliver</h2>
+            <div class="spotify">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5m4Hatowj4h4x2dMCJJOKc?utm_source=generator" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div class="song-details">
+                <div class="youtube">
+                    <iframe width="100%" height="180" src="https://www.youtube.com/embed/Bpr49ZyEjAc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="enlaces-plataformas">
+                    <p>Otras plataformas:</p>
+                    <div class="plataformas">
+                        <a href="https://music.apple.com/ae/album/el-parque/1753053643" target="_blank"><img src="assets/Apple_Music.png" alt="Apple Music"></a>
+                        <a href="https://music.amazon.es/tracks/B0D8N4MMQN" target="_blank"><img src="assets/Amazon Music.png" alt="Amazon Music"></a>
+                        <a href="https://deezer.page.link/Qcjk2zfdQy67oPYA7" target="_blank"><img src="assets/Deezer.png" alt="Deezer"></a>
+                        <a href="https://tidal.com/browse/track/372820979" target="_blank"><img src="assets/Tidal.png" alt="Tidal"></a>
+                        <a href="https://www.shazam.com/song/1753054076/el-parque" target="_blank"><img src="assets/Shazam.png" alt="Shazam"></a>
+                        <a href="https://soundcloud.com/chiaraoliver/el-parque" target="_blank"><img src="assets/SoundCloud.png" alt="SoundCloud"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Single 3 -->
+        <div class="single-container">
+            <h2>El X Venir</h2>
+            <div class="spotify">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1lHB30OmHigE89xBgGekwE?utm_source=generator" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div class="song-details">
+                <div class="youtube">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/nKjLYfG6hPo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                </div>
+                <div class="enlaces-plataformas">
+                    <p>Otras plataformas:</p>
+                    <div class="plataformas">
+                        <a href="https://music.apple.com/ae/album/el-x-venir/1729423642" target="_blank"><img src="assets/Apple_Music.png" alt="Apple Music"></a>
+                        <a href="https://music.amazon.es/tracks/B0CV4JRFD2" target="_blank"><img src="assets/Amazon Music.png" alt="Amazon Music"></a>
+                        <a href="https://deezer.page.link/mBHSjeRa9Go6riSZ7" target="_blank"><img src="assets/Deezer.png" alt="Deezer"></a>
+                        <a href="https://tidal.com/browse/track/344475680" target="_blank"><img src="assets/Tidal.png" alt="Tidal"></a>
+                        <a href="https://www.shazam.com/track/690991976/el-x-venir" target="_blank"><img src="assets/Shazam.png" alt="Shazam"></a>
+                        <a href="https://soundcloud.com/violetahodar/el-x-venir" target="_blank"><img src="assets/SoundCloud.png" alt="SoundCloud"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Footer con enlaces y redes sociales -->
+<footer>
+    <div class="footer-content">
+        <p>© 2024 VIOLETA - Fanpage</p>
+    </div>
+    <div class="footer-page">
+        <!-- <a href="https://violetaoficial.com" target="_blank">Página Oficial</a> -->
+        Página Oficial
+    </div>
+    <div class="footer-social-icons">
+        <a href="https://www.instagram.com/violetahodar" target="_blank">
+            <img src="assets/instagram-icon.png" alt="Instagram">
+        </a>
+        <a href="https://x.com/HFVioleta" target="_blank">
+            <img src="assets/twitter-icon.png" alt="Twitter">
+        </a>
+        <a href="https://www.tiktok.com/@hodarvioleta" target="_blank">
+            <img src="assets/tiktok-icon.png" alt="TikTok">
+        </a>
+        <a href="https://whatsapp.com/channel/0029VajuudwBqbrGLRqDPw2P" target="_blank">
+            <img src="assets/whatsapp-icon.png" alt="WhatsApp">
+        </a>
+    </div>
+</footer>
+
+    <script src="js/nav.js"></script>
+    <script src="js/lunarTrail.js" defer></script>
+</body>
+</html>

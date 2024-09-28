@@ -1,0 +1,222 @@
+/* Variables de color */
+:root {
+    --azul-oscuro: #1a2b4e; /* Azul oscuro para fondos */
+    --azul-claro: #dfe9f3; /* Azul casi blanco para textos */
+    --azul-resaltado: #a1c9f4; /* Azul resaltado para hover y elementos destacados */
+    --blanco: #fff; /* Blanco puro para contrastes */
+}
+
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        left: 0; /* Asegúrate de que el menú se estire de un lado al otro */
+        background: var(--azul-oscuro);
+        width: 100%; /* Asegúrate de que ocupe todo el ancho */
+        top: 60px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        z-index: 10; /* Mantener por encima del hero */
+        padding: 0; /* Asegúrate de que no haya padding que afecte el ancho */
+        margin: 0; /* Elimina márgenes que puedan reducir el ancho */
+    }
+
+    nav ul.show {
+        max-height: 500px; /* Ajusta esto según sea necesario */
+    }
+
+    .menu-toggle {
+        display: flex;
+        z-index: 11; /* Asegúrate de que el botón también esté por encima */
+    }
+}
+
+/*Hero*/
+.hero-gira {
+    position: relative;
+    height: 80vh;
+    background-image: url('../assets/violeta-gira.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--blanco);
+}
+
+.hero-gira-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-gira-text {
+    z-index: 1;
+}
+
+.hero-gira h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero-gira p {
+    font-size: 1.5rem;
+    margin-bottom: 35px;
+}
+
+/*Mapa*/
+.mapa-gira {
+    padding: 50px 20px;
+}
+
+.mapa-gira h2 {
+    font-size: 2rem;
+    color: var(--blanco);
+    margin-bottom: 40px; /* Espacio entre el título y los reproductores */
+    text-transform: uppercase; /* Título en mayúsculas */
+}
+
+.mapa-container {
+    width: 80%;
+    height: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+/* Listado Conciertos */
+.listado-conciertos {
+    background-color: var(--azul-claro);
+    padding: 50px 20px;
+}
+
+.listado-conciertos h2 {
+    font-size: 2rem;
+    color: var(--azul-oscuro);
+    margin-bottom: 30px; /* Espacio entre el título y el mapa */
+    text-transform: uppercase; /* Título en mayúsculas */
+    text-align: center; /* Centrar el título */
+}
+
+.listado-conciertos ul {
+    list-style: none;
+    padding: 0;
+}
+
+.listado-conciertos ul li {
+    margin-bottom: 40px; /* Espacio entre conciertos */
+    color: var(--azul-oscuro);
+}
+
+.concierto-header {
+    display: flex;
+    justify-content: center; /* Centrar la fecha y el botón */
+    align-items: center;
+    gap: 20px; /* Espacio entre la fecha y el botón */
+    margin-bottom: 5px; /* Espacio entre la fecha/botón y la sala */
+}
+
+.concierto-header span {
+    font-size: 1.2rem;
+}
+
+.sala-concierto {
+    font-size: 1.1rem;
+    color: var(--azul-oscuro);
+    margin-left: 0; /* Alineado con la ciudad y fecha */
+}
+
+/*Conciertos anteriores*/
+.section-conciertos-pasados {
+    background-color: var(--azul-claro);
+    padding: 50px 20px;
+}
+
+.section-conciertos-pasados h2 {
+    font-size: 2rem;
+    color: var(--azul-oscuro);
+    margin-bottom: 30px; /* Espacio entre el título y el mapa */
+    text-transform: uppercase; /* Título en mayúsculas */
+    text-align: center; /* Centrar el título */
+}
+
+.contenedor-video {
+    width: 80%;
+    margin: 0 auto; /* Centramos el video */
+    max-width: 800px; /* Limitar el tamaño máximo del video */
+}
+
+iframe {
+    border-radius: 10px;
+    margin-bottom: 15px; /* Espacio inferior entre reproductores y el siguiente contenido */
+}
+
+.lugar-concierto {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: var(--azul-oscuro); /* Texto oscuro */
+}
+
+.fecha-concierto {
+    font-size: 1rem;
+    color: var(--azul-oscuro); /* Texto más claro */
+}
+
+
+
+/* Proximamente */
+.proximamente {
+    background-color: var(--azul-claro);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.titulo-proximamente {
+    font-size: 4rem;
+    color: #d9534f; /* Rojo suave */
+    text-transform: uppercase;
+    animation: parpadeo 1.5s infinite;
+}
+
+.subtitulo-proximamente {
+    font-size: 2rem;
+    color: var(--azul-oscuro); /* Mismo rojo para coherencia */
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Añade un poco de espacio entre letras */
+}
+
+@keyframes parpadeo {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7; /* Ajuste sutil para el parpadeo */
+    }
+}
+
+.circulo-giratorio {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #d9534f; /* Color del círculo */
+    border-top: 5px solid transparent; /* Parte superior transparente */
+    border-radius: 50%; /* Hacerlo circular */
+    animation: girar 1s linear infinite; /* Animación */
+    margin: 20px auto; /* Centrar */
+}
+
+@keyframes girar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+
+

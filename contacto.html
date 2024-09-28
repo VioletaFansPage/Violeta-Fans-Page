@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página web de fans dedicada a Violeta, una artista emergente española.">
+    <title>VIOLETA - Contacto</title>
+
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/lunarTrail.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="icon" href="assets/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" crossorigin=""/>
+</head>
+<body id="top">
+
+<!-- Header con navegación responsive -->
+<header>
+    <div class="logo">
+        <img src="assets/logo-violeta.png" alt="VIOLETA Logo">
+    </div>
+    <nav>
+        <button class="menu-toggle" aria-label="Abrir Menú">
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+        </button>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="biografia.html">Biografía</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="musica.html">Música</a></li>
+            <li><a href="gira.html">Gira</a></li>
+            <li><a href="proximamente.html">Zona Fans</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/violetahodar" target="_blank">
+            <img src="assets/instagram-icon.png" alt="Instagram">
+        </a>
+        <a href="https://x.com/HFVioleta" target="_blank">
+            <img src="assets/twitter-icon.png" alt="Twitter">
+        </a>
+        <a href="https://www.tiktok.com/@hodarvioleta" target="_blank">
+            <img src="assets/tiktok-icon.png" alt="TikTok">
+        </a>
+        <a href="https://whatsapp.com/channel/0029VajuudwBqbrGLRqDPw2P" target="_blank">
+            <img src="assets/whatsapp-icon.png" alt="WhatsApp">
+        </a>
+    </div>
+</header>
+
+<!-- Sección de Contacto -->
+<section class="hero-contacto">
+    <h1>Contacto</h1>
+    <p>¡Queremos conocer tus ideas! Completa el siguiente formulario para enviarnos tus propuestas y sugerencias.</p>
+
+    <form action="https://formspree.io/f/xpwavrgp" method="POST" class="contact-form" id="contactForm">
+        <label for="asunto">Asunto:</label>
+        <select id="asunto" name="asunto" required>
+            <option value="">Seleccione un asunto</option>
+            <option value="Dudas">Dudas</option>
+            <option value="Quejas">Quejas</option>
+            <option value="Ideas o propuestas">Ideas o propuestas</option>
+            <option value="Fan Art">Fan Art</option>
+            <option value="Dejar de recibir notificaciones">Desactivar notificaciones</option>
+            <option value="Otros">Otros</option>
+        </select>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+" title="El nombre solo debe contener letras y espacios" placeholder="Introduce tu nombre">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Introduce una dirección de correo válida" placeholder="Introduce tu correo electrónico">
+    
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje aquí..."></textarea>
+
+        <button type="submit" class="cta-button">Enviar</button>
+    </form>
+
+    <!-- Frase de contacto adicional -->
+    <p style="margin-top: 20px;">También puedes ponerte en contacto con nosotros a través de nuestras redes sociales:</p>
+    
+    <div class="social-icons">
+        <span>Próximamente</span> <!-- Frase en lugar de iconos -->
+    </div>
+    <!-- Iconos de redes sociales 
+    <div class="social-icons" style="margin-top: 10px;">
+        <a href="https://www.instagram.com/pagevioleta" target="_blank">
+            <img src="assets/instagram-icon.png" alt="Instagram">
+        </a>
+        <a href="https://x.com/pagevioleta" target="_blank">
+            <img src="assets/twitter-icon.png" alt="Twitter">
+        </a>
+    </div> -->
+</section>
+
+<div class="faq-section">
+    <h2>Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <button class="faq-question">¿Dónde puedo escuchar la música de Violeta?</button>
+      <div class="faq-answer">
+        <p>En la sección de <strong>Música</strong> encontrarás algunos enlaces para escuchar las canciones en plataformas como Spotify, Apple Music, Amazon Music, Deezer, entre otras.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+        <button class="faq-question">¿Es la página oficial de Violeta?</button>
+        <div class="faq-answer">
+          <p>Esta página <strong>no</strong> es la oficial de Violeta. Es un sitio creado por y para fans. Si buscas la página oficial, te recomendamos visitar su <!--<a href="https://violetaoficial.com" target="_blank">-->página oficial</a> y sus redes sociales para más información.</p>
+        </div>
+      </div>
+    <div class="faq-item">
+        <button class="faq-question">¿Cómo puedo participar en el Fan Map?</button>
+        <div class="faq-answer">
+          <p>Si no ves tu ciudad en el mapa de fans, puedes rellenar el formulario de "Añadir Ciudad" en la <strong>Zona Fan</strong> y, una vez validado, tu ciudad aparecerá en el mapa</p>
+        </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">¿Cómo puedo suscribirme para recibir notificaciones sobre concursos?</button>
+      <div class="faq-answer">
+        <p>En la página de <strong>Zona Fan</strong>, encontrarás un formulario donde puedes dejar tu correo para recibir información sobre concursos, novedades, y eventos.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Tengo un fan art, ¿cómo puedo enviarlo?</button>
+      <div class="faq-answer">
+        <p>Si has creado algún diseño, imagen o video relacionado con Violeta, puedes enviarlo a través del formulario en la sección de <strong>Fan Art</strong> dentro de <strong>Zona Fan</strong>. Recuerda incluir tus redes sociales o nombre para los créditos.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">¿Cómo sé si mi fan art o mi fan map ha sido aceptado?</button>
+      <div class="faq-answer">
+        <p>Te enviaremos un correo confirmando que tu fan art ha sido revisado y aprobado para aparecer en la sección de correspondiente de la <strong>Zona Fan</strong>.</p>
+      </div>
+    </div>
+  </div>
+
+<!-- Footer con enlaces y redes sociales -->
+<footer>
+    <div class="footer-content">
+        <p>© 2024 VIOLETA - Fanpage</p>
+    </div>
+    <div class="footer-page">
+        <!-- <a href="https://violetaoficial.com" target="_blank">Página Oficial</a> -->
+        Página Oficial
+    </div>
+    <div class="footer-social-icons">
+        <a href="https://www.instagram.com/violetahodar" target="_blank">
+            <img src="assets/instagram-icon.png" alt="Instagram">
+        </a>
+        <a href="https://x.com/HFVioleta" target="_blank">
+            <img src="assets/twitter-icon.png" alt="Twitter">
+        </a>
+        <a href="https://www.tiktok.com/@hodarvioleta" target="_blank">
+            <img src="assets/tiktok-icon.png" alt="TikTok">
+        </a>
+        <a href="https://whatsapp.com/channel/0029VajuudwBqbrGLRqDPw2P" target="_blank">
+            <img src="assets/whatsapp-icon.png" alt="WhatsApp">
+        </a>
+    </div>
+</footer>
+
+<script src="js/nav.js"></script>
+    <!-- Script para manejar el envío del formulario y mostrar el mensaje -->
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Previene el envío normal del formulario
+
+        fetch(this.action, {
+            method: this.method,
+            body: new FormData(this),
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                // Muestra el cuadro de mensaje
+                const messageBox = document.getElementById("messageBox");
+                messageBox.style.display = "block";
+
+                // Cierra el mensaje automáticamente después de 3 segundos
+                setTimeout(() => {
+                    messageBox.style.display = "none";
+                }, 5000);
+
+            } else {
+                alert("Hubo un problema con el envío del formulario.");
+            }
+        }).catch(error => {
+            alert("Hubo un problema con el envío del formulario.");
+        });
+    });
+
+    // Cerrar el mensaje manualmente
+    document.getElementById("closeButton").addEventListener("click", function() {
+        document.getElementById("messageBox").style.display = "none";
+    });
+</script>
+
+<script>
+    document.querySelectorAll('.faq-question').forEach(item => {
+      item.addEventListener('click', () => {
+        const answer = item.nextElementSibling;
+        answer.classList.toggle('show');
+      });
+    });
+  </script>
+<script src="js/lunarTrail.js" defer></script>
+</body>
+</html>

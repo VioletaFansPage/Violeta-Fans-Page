@@ -1,0 +1,186 @@
+/* Variables de color */
+:root {
+    --azul-oscuro: #1a2b4e; /* Azul oscuro para fondos */
+    --azul-claro: #dfe9f3; /* Azul casi blanco para textos */
+    --azul-resaltado: #a1c9f4; /* Azul resaltado para hover y elementos destacados */
+    --blanco: #fff; /* Blanco puro para contrastes */
+}
+
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        left: 0; /* Asegúrate de que el menú se estire de un lado al otro */
+        background: var(--azul-oscuro);
+        width: 100%; /* Asegúrate de que ocupe todo el ancho */
+        top: 60px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        z-index: 10; /* Mantener por encima del hero */
+        padding: 0; /* Asegúrate de que no haya padding que afecte el ancho */
+        margin: 0; /* Elimina márgenes que puedan reducir el ancho */
+    }
+
+    nav ul.show {
+        max-height: 500px; /* Ajusta esto según sea necesario */
+    }
+
+    .menu-toggle {
+        display: flex;
+        z-index: 11; /* Asegúrate de que el botón también esté por encima */
+    }
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 80vh;
+    background-image: url('../assets/violeta-index.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--blanco);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.hero-text {
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 35px;
+}
+
+/* Últimas Noticias */
+.ultimas-noticias {
+    background-color: var(--azul-claro);
+    padding: 50px 20px;
+}
+
+.ultimas-noticias h2 {
+    font-size: 2rem;
+    color: var(--azul-oscuro);
+    margin-bottom: 40px; /* Aumentamos el espacio con las noticias */
+    text-transform: uppercase; /* Cambiado a mayúsculas */
+}
+
+.noticias-container {
+    display: flex;
+    gap: 30px; /* Aumentamos el espacio entre las noticias */
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.noticia {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    text-align: center; /* Alineación de los textos */
+    height: 400px;
+}
+
+.noticia:hover {
+    background-color: var(--azul-resaltado); /* Resaltar al hacer hover */
+}
+
+.noticia img {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.noticia h3 {
+    margin: 15px 0;
+    font-size: 1.5rem;
+    text-decoration: none; /* Quitamos el subrayado */
+    color: var(--blanco); /* Mantenemos el color sin cambiar en hover */
+}
+
+.noticia p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-decoration: none; /* Quitamos el subrayado */
+    color: var(--blanco); /* Mantenemos el color sin cambiar en hover */
+}
+
+.noticias-container a {
+    text-decoration: none;
+}
+
+/* Previsualización de Música */
+.preview-musica{
+    padding: 50px 20px;
+}
+
+.preview-musica h2 {
+    font-size: 2rem;
+    color: var(--blanco);
+    margin-bottom: 40px; /* Espacio entre el título y los reproductores */
+    text-transform: uppercase; /* Título en mayúsculas */
+}
+
+.media-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre el reproductor de Spotify y el de YouTube */
+    flex-wrap: wrap;
+}
+
+iframe {
+    border-radius: 10px;
+    margin-bottom: 30px; /* Espacio inferior entre reproductores y el siguiente contenido */
+}
+
+/* Zona de Fans */
+.zona-fans {
+    background-color: var(--azul-claro);
+    padding: 50px 20px;
+}
+
+.zona-fans h2 {
+    font-size: 2rem;
+    color: var(--azul-oscuro);
+    margin-bottom: 30px; /* Espacio entre el título y el mapa */
+    text-transform: uppercase; /* Título en mayúsculas */
+    text-align: center; /* Centrar el título */
+}
+
+#mapa-container {
+    height: 400px;
+    width: 90%; /* Ajuste para que ocupe menos del ancho total */
+    max-width: 600px; /* Máximo ancho para reducir el tamaño */
+    margin: 0 auto; /* Centramos el mapa */
+    border-radius: 10px;
+    margin-bottom: 50px; /* Espacio entre el mapa y el botón */
+}
+
+.zona-fans p {
+    margin-bottom: 30px; /* Aumentar espacio entre el párrafo y el mapa */
+    color: var(--azul-oscuro);
+}

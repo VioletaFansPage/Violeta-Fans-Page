@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página web de fans dedicada a Violeta, una artista emergente española.">
+    <title>VIOLETA - Gira</title>
+
+    <link rel="stylesheet" href="css/zonafan.css">
+    <link rel="stylesheet" href="css/lunarTrail.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="icon" href="assets/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" crossorigin=""/>
+</head>
+<body id="top">
+
+<!-- Header con navegación responsive -->
+<header>
+    <div class="logo">
+        <img src="assets/logo-violeta.png" alt="VIOLETA Logo">
+    </div>
+    <nav>
+        <button class="menu-toggle" aria-label="Abrir Menú">
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+        </button>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="biografia.html">Biografía</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="musica.html">Música</a></li>
+            <li><a href="gira.html">Gira</a></li>
+            <li><a href="zonafan.html">Zona Fans</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/violetahodar" target="_blank">
+            <img src="assets/instagram-icon.png" alt="Instagram">
+        </a>
+        <a href="https://x.com/HFVioleta" target="_blank">
+            <img src="assets/twitter-icon.png" alt="Twitter">
+        </a>
+        <a href="https://www.tiktok.com/@hodarvioleta" target="_blank">
+            <img src="assets/tiktok-icon.png" alt="TikTok">
+        </a>
+        <a href="https://whatsapp.com/channel/0029VajuudwBqbrGLRqDPw2P" target="_blank">
+            <img src="assets/whatsapp-icon.png" alt="WhatsApp">
+        </a>
+    </div>
+</header>
+
+<!-- Introducción de la gira (similar a Hero Section) -->
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+        <h1>Bienvenidos a la Zona Fan</h1>
+        <p>¡Un espacio exclusivo para los verdaderos fans de Violeta!</p>
+    </div>
+</section>
+
+<!-- Mapa de Fans Section -->
+<section class="mapa-fans">
+    <h2>Mapa de Fans</h2>
+    <p>Descubre dónde están los fans de Violeta alrededor del mundo.</p>
+    <div id="mapa-fans" class="mapa-container"></div>
+    <p>¿No apareces y quieres participar? ¡Te añadimos al mapa!</p>
+    <button id="btn-add-city" class="cta-button">Participar</button>
+    
+    <!-- Modal del formulario para agregar ciudad -->
+    <div id="modal-form" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Añade tu información  al mapa</h3>
+            <form id="fan-form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="pais">País:</label>
+                <input type="text" id="pais" name="pais" required>
+                
+                <label for="ciudad">Ciudad:</label>
+                <input type="text" id="ciudad" name="ciudad" required>
+                
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+                
+                <button type="submit" class="cta-button">Enviar</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Playlists Section -->
+<section class="playlists">
+    <h2>Playlists para ti</h2>
+    <div class="playlist-container">
+        <!-- Playlist 1 -->
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1E4vFIdUPEBEXV?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        
+        <!-- Playlist 2 -->
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2iRIZ4tgbPev1qVhNijIU4?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        
+        <!-- Playlist 3 -->
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2D2nIyo1NKl6sBUKBlEQ0b?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        
+        <!-- Playlist 4 -->
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/00973CjjCzghutFAe0LBJW?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        
+        <!-- Playlist 5 -->
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5k173ResG8fWOU8beiSHV5?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        
+        <!-- Playlist 6 -->
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/51ea7lI1axGCYxTsmkgjlt?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+</section>
+
+<!-- Concursos Section -->
+<section class="concursos">
+    <h2>Concursos y Sorpresas Exclusivas</h2>
+    <p>‼️Actualmente no hay ningún concurso activo, ¡pronto tendrás noticias!</p>
+    <p>Deja tu correo para ser notificado cuando el próximo concurso esté disponible.</p>
+    <form action="https://formspree.io/f/movaobpy" method="POST" class="subscribe-form" id="contactForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Introduce una dirección de correo válida" placeholder="Introduce tu correo electrónico">
+        <button type="submit" class="cta-button">quiero recibir avisos</button>
+    </form>
+</section>
+
+<!-- Fan Art Section -->
+<section class="fan-art">
+    <h2>Arte de los Fans</h2>
+    <div class="fan-art-gallery">
+        <div class="fan-art-item">
+            <img src="fanart1.jpg" alt="Fan Art 1">
+            <p>Diseño por @fan1</p>
+        </div>
+        <div class="fan-art-item">
+            <img src="fanart2.jpg" alt="Fan Art 2">
+            <p>Diseño por @fan2</p>
+        </div>
+        <!-- Más fan art -->
+    </div>
+    <button class="cta-button">Enviar mi Fan Art</button>
+</section>
+
+<!-- Sección de Cuentas de Twitter en Zona Fan -->
+<section class="zona-fan-twitter">
+    <h2>Sigue la actualidad de Violeta en Twitter</h2>
+
+    <div class="twitter-container">
+        <!-- Cuenta 1 -->
+        <div class="twitter-embed">
+            <a class="twitter-timeline" href="https://x.com/VioletaHNews?ref_src=twsrc%5Etfw" 
+               data-width="300" data-height="400" data-theme="light">
+               Tweets by VioletaHNews
+            </a>
+        </div>
+
+        <!-- Cuenta 2 -->
+        <div class="twitter-embed">
+            <a class="twitter-timeline" href="https://x.com/vissidvioleta23?ref_src=twsrc%5Etfw" 
+               data-width="300" data-height="400" data-theme="light">
+               Tweets by vissidvioleta23
+            </a>
+        </div>
+
+        <!-- Cuenta 3 -->
+        <div class="twitter-embed">
+            <a class="twitter-timeline" href="https://x.com/violetalatam?ref_src=twsrc%5Etfw" 
+               data-width="300" data-height="400" data-theme="light">
+               Tweets by violetalatam
+            </a>
+        </div>
+    </div>
+
+    <!-- Script de Twitter para cargar los widgets -->
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</section>
+
+<!-- Footer con enlaces y redes sociales -->
+<footer>
+    <div class="footer-content">
+        <p>© 2024 VIOLETA - Fanpage</p>
+    </div>
+    <div class="footer-page">
+        <a href="https://violetaoficial.com" target="_blank">Página Oficial</a>
+    </div>
+    <div class="footer-social-icons">
+        <a href="https://www.instagram.com/violetahodar" target="_blank">
+            <img src="assets/instagram-icon.png" alt="Instagram">
+        </a>
+        <a href="https://x.com/HFVioleta" target="_blank">
+            <img src="assets/twitter-icon.png" alt="Twitter">
+        </a>
+        <a href="https://www.tiktok.com/@hodarvioleta" target="_blank">
+            <img src="assets/tiktok-icon.png" alt="TikTok">
+        </a>
+        <a href="https://whatsapp.com/channel/0029VajuudwBqbrGLRqDPw2P" target="_blank">
+            <img src="assets/whatsapp-icon.png" alt="WhatsApp">
+        </a>
+    </div>
+</footer>
+
+<script src="js/nav.js"></script>
+<!-- Leaflet JS para el mapa interactivo -->
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" crossorigin=""></script>
+
+<!-- Script para generar el mapa interactivo -->
+<script>
+    const map = L.map('mapa-gira', {
+        center: [37.177336, -2.92528],
+        zoom: 5,
+        minZoom: 3, // Limitar el zoom mínimo
+        maxZoom: 10 // Limitar el zoom máximo
+    });
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
+        maxZoom: 10,
+    }).addTo(map);
+
+    // Conciertos confirmados con latitud, longitud, fecha y ciudad
+    const conciertosGira = [
+        { nombre: "Madrid", fecha: "2 de noviembre de 2024", lat: 40.416775, lng: -3.703790 },
+        { nombre: "Granada", fecha: "10 de noviembre de 2024", lat: 37.177336, lng: -3.598557 },
+        { nombre: "Barcelona", fecha: "15 de diciembre de 2024", lat: 41.38879, lng: 2.15899 },
+        { nombre: "Barcelona", fecha: "16 de diciembre de 2024", lat: 41.3828939, lng: 2.1774322 },
+        { nombre: "Tenerife", fecha: "20 de diciembre de 2024", lat: 28.291564, lng: -16.629130 },
+    ];
+
+    // Añadir marcadores al mapa con las ciudades y fechas
+    conciertosGira.forEach(concierto => {
+        L.marker([concierto.lat, concierto.lng]).addTo(map)
+            .bindPopup(`<b>${concierto.nombre}</b><br>${concierto.fecha}`)
+            .openPopup();
+    });
+</script>
+<script src="js/lunarTrail.js" defer></script>
+</body>
+</html>

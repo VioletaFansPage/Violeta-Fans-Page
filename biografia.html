@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página web de fans dedicada a Violeta, una artista emergente española.">
+    <title>VIOLETA - Biografía</title>
+
+    <link rel="stylesheet" href="css/biografia.css">
+    <link rel="stylesheet" href="css/lunarTrail.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="icon" href="assets/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" crossorigin=""/>
+</head>
+<body id="top">
+
+<!-- Header con navegación responsive -->
+<header>
+    <div class="logo">
+        <img src="assets/logo-violeta.png" alt="VIOLETA Logo">
+    </div>
+    <nav>
+        <button class="menu-toggle" aria-label="Abrir Menú">
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+        </button>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="biografia.html">Biografía</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="musica.html">Música</a></li>
+            <li><a href="gira.html">Gira</a></li>
+            <li><a href="proximamente.html">Zona Fans</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/violetahodar" target="_blank">
+            <img src="assets/instagram-icon.png" alt="Instagram">
+        </a>
+        <a href="https://x.com/HFVioleta" target="_blank">
+            <img src="assets/twitter-icon.png" alt="Twitter">
+        </a>
+        <a href="https://www.tiktok.com/@hodarvioleta" target="_blank">
+            <img src="assets/tiktok-icon.png" alt="TikTok">
+        </a>
+        <a href="https://whatsapp.com/channel/0029VajuudwBqbrGLRqDPw2P" target="_blank">
+            <img src="assets/whatsapp-icon.png" alt="WhatsApp">
+        </a>
+    </div>
+</header>
+
+<!-- Hero Section con imagen destacada -->
+<section class="hero">
+    <div class="hero-overlay"></div> <!-- Capa para destacar el texto -->
+    <div class="hero-text">
+        <h1>Biografía</h1>
+        <p>Conoce más sobre Violeta, una de las voces emergentes más prometedoras de la música española.</p>
+    </div>
+    <div class="biografia">
+        <p><strong>Violeta Isabel Hódar Feixas</strong>, conocida artísticamente como <strong>Violeta</strong>, nació el 23 de enero de 2001 en Motril, Granada. Desde temprana edad, demostró una profunda pasión por la música y las artes, influenciada por su familia. Violeta dedicó <strong>diez años al estudio del clarinete</strong> en el Conservatorio Profesional de Música Antonio Lorenzo, donde adquirió una sólida formación musical.</p>
+
+        <p>Se especializó en <strong>Publicidad, Periodismo y Comunicación Audiovisual</strong> en la University of Wales Trinity Saint David en Granada. Antes de lanzarse a la música, trabajó como reportera en <strong>Telecinco</strong>, donde cubrió importantes acontecimientos en su ciudad.</p>
+        
+        <p>A los 18 años, participó en <strong>Operación Triunfo 2020</strong> y, aunque regresó en 2023, su verdadera pasión se ha enfocado en su carrera en solitario. Su primera actuación después del programa fue en el <strong>Coca Cola Music Experience</strong>, donde no solo formó parte del cartel de artistas, sino que también presentó el evento durante dos días. Actualmente, Violeta está trabajando en su primer disco y preparando su primera gira.</p>
+        
+        <p>Con su primer sencillo, <strong>"el x venir"</strong>, y el segundo, <strong>"LIBERTÁ"</strong>, lanzado tras su paso por Miami, Violeta ha demostrado su compromiso con su música y su deseo de conectar con el público. Su carisma y sentido del humor han resonado con sus seguidores, especialmente por momentos divertidos como cuando cambió "poco a poco" a "poco a yopo", creando un vínculo especial con su audiencia.</p>
+        
+        <p>Violeta ha sido reconocida por su impacto positivo en la sociedad y, en 2024, recibió el <strong>Premio Igualdad y Nuevos Valores</strong> en Motril, durante el Día Internacional de la Mujer, destacando su compromiso con causas sociales.</p>
+    </div>
+</section>
+
+<!-- Sección de Datos Curiosos -->
+<section class="datos-curiosos">
+    <h2>DATOS CURIOSOS</h2>
+    <div class="datos-curiosos-grid">
+        <div class="curiosidad">
+            <img src="assets/Clarinete.png" alt="Clarinete" class="curiosidad-img">
+            <h3>Amor por los instrumentos</h3>
+            <p>Violeta estudió <strong>clarinete</strong> en el conservatorio durante <strong>10 años</strong>. Aunque actualmente lo toca con menos frecuencia, ha expresado su interés en aprender a tocar otros instrumentos como el <strong>piano</strong> y la <strong>guitarra</strong>.</p>
+        </div>
+        <div class="curiosidad">
+            <img src="assets/Teatro.png" alt="Teatro" class="curiosidad-img">
+            <h3>Pasión por el arte y el teatro</h3>
+            <p>Desde pequeña, Violeta ha estado influenciada por el <strong>arte</strong> y el <strong>teatro</strong>, inspirada por sus padres. Su nombre proviene de una famosa <strong>ópera</strong>, lo que refuerza su conexión con el mundo artístico.</p>
+        </div>
+        <div class="curiosidad">
+            <img src="assets/Microfono.png" alt="Reportera" class="curiosidad-img">
+            <h3>Carrera en el periodismo</h3>
+            <p>Antes de dedicarse a la música, Violeta se formó en <strong>Publicidad</strong>, <strong>Periodismo</strong> y <strong>Comunicación Audiovisual</strong>, y trabajó como <strong>reportera</strong> para Telecinco, cubriendo destacados eventos en <strong>Granada</strong>.</p>
+        </div>
+        <div class="curiosidad">
+            <img src="assets/Risas.png" alt="Momentos Divertidos" class="curiosidad-img">
+            <h3>Momentos espontáneos</h3>
+            <p>Violeta es conocida por su <strong>espontaneidad</strong> y su tendencia a cambiar palabras de manera divertida. Algunos ejemplos populares entre sus seguidores son <strong>"poco a yopo"</strong> y <strong>"camparta"</strong>, generando risas y memes entre sus <strong>fans</strong>.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Galería de imágenes -->
+<!--<section class="galeria">
+    <h2>Galería de Fotos</h2>
+    <div class="grid-gallery">
+        <img src="assets/gallery/imagen1.jpg" alt="Créditos">
+        <img src="assets/gallery/imagen2.jpg" alt="Créditos">
+        <img src="assets/gallery/imagen3.jpg" alt="Créditos">
+        <img src="assets/gallery/imagen4.jpg" alt="Créditos">
+        <img src="assets/gallery/imagen5.jpg" alt="Créditos">
+        <img src="assets/gallery/imagen6.jpg" alt="Créditos">
+        <img src="assets/gallery/imagen7.jpg" alt="Créditos">
+        <img src="assets/gallery/imagen8.jpg" alt="Créditos">
+        
+    </div>
+</section>-->
+
+<!-- Footer con enlaces y redes sociales -->
+<footer>
+    <div class="footer-content">
+        <p>© 2024 VIOLETA - Fanpage</p>
+    </div>
+    <div class="footer-page">
+        <!-- <a href="https://violetaoficial.com" target="_blank">Página Oficial</a> -->
+        Página Oficial
+    </div>
+    <div class="footer-social-icons">
+        <a href="https://www.instagram.com/violetahodar" target="_blank">
+            <img src="assets/instagram-icon.png" alt="Instagram">
+        </a>
+        <a href="https://x.com/HFVioleta" target="_blank">
+            <img src="assets/twitter-icon.png" alt="Twitter">
+        </a>
+        <a href="https://www.tiktok.com/@hodarvioleta" target="_blank">
+            <img src="assets/tiktok-icon.png" alt="TikTok">
+        </a>
+        <a href="https://whatsapp.com/channel/0029VajuudwBqbrGLRqDPw2P" target="_blank">
+            <img src="assets/whatsapp-icon.png" alt="WhatsApp">
+        </a>
+    </div>
+</footer>
+    <script src="js/nav.js"></script>
+    <script src="js/lunarTrail.js" defer></script>
+</body>
+</html>

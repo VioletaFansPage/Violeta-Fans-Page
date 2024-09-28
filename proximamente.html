@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página web de fans dedicada a Violeta, una artista emergente española.">
+    <title>PROXIMAMENTE</title>
+
+    <link rel="stylesheet" href="css/proximamente.css">
+    <link rel="stylesheet" href="css/lunarTrail.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="icon" href="assets/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" crossorigin=""/>
+</head>
+<body id="top">
+
+<!-- Header con navegación responsive -->
+<header>
+    <div class="logo">
+        <img src="assets/logo-violeta.png" alt="VIOLETA Logo">
+    </div>
+    <nav>
+        <button class="menu-toggle" aria-label="Abrir Menú">
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+        </button>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="biografia.html">Biografía</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="musica.html">Música</a></li>
+            <li><a href="gira.html">Gira</a></li>
+            <li><a href="proximamente.html">Zona Fans</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/violetahodar" target="_blank">
+            <img src="assets/instagram-icon.png" alt="Instagram">
+        </a>
+        <a href="https://x.com/HFVioleta" target="_blank">
+            <img src="assets/twitter-icon.png" alt="Twitter">
+        </a>
+        <a href="https://www.tiktok.com/@hodarvioleta" target="_blank">
+            <img src="assets/tiktok-icon.png" alt="TikTok">
+        </a>
+        <a href="https://whatsapp.com/channel/0029VajuudwBqbrGLRqDPw2P" target="_blank">
+            <img src="assets/whatsapp-icon.png" alt="WhatsApp">
+        </a>
+    </div>
+</header>
+
+<!-- Sección Próximamente -->
+<section class="proximamente">
+    <h1 class="titulo-proximamente">¡PRÓXIMAMENTE!</h1>
+    <h2 class="subtitulo-proximamente">Estamos trabajando en ello...</h2>
+    <h3 class="subtitulo-graciosa letras-animadas">¡Cuidado! Somos expertos en la calma...</h3>
+    <div class="emoticono-obras">🚧🚧🚧</div> <!-- Emoticono de obras -->
+    <div class="gif-trabajando">
+        <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHo2cHhybTl2NTVwZ2JpcG96ZWtrMThvNm9vMzBxcHVvZjB0OWdzaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Er3QVX48nt5ok/giphy.gif" alt="Persona trabajando lentamente">
+    </div>
+</section>
+
+<!-- Footer con enlaces y redes sociales -->
+<footer>
+    <div class="footer-content">
+        <p>© 2024 VIOLETA - Fanpage</p>
+    </div>
+    <div class="footer-page">
+        <!-- <a href="https://violetaoficial.com" target="_blank">Página Oficial</a> -->
+        Página Oficial
+    </div>
+    <div class="footer-social-icons">
+        <a href="https://www.instagram.com/violetahodar" target="_blank">
+            <img src="assets/instagram-icon.png" alt="Instagram">
+        </a>
+        <a href="https://x.com/HFVioleta" target="_blank">
+            <img src="assets/twitter-icon.png" alt="Twitter">
+        </a>
+        <a href="https://www.tiktok.com/@hodarvioleta" target="_blank">
+            <img src="assets/tiktok-icon.png" alt="TikTok">
+        </a>
+        <a href="https://whatsapp.com/channel/0029VajuudwBqbrGLRqDPw2P" target="_blank">
+            <img src="assets/whatsapp-icon.png" alt="WhatsApp">
+        </a>
+    </div>
+</footer>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const subtitulo = document.querySelector('.letras-animadas');
+        const texto = subtitulo.textContent;
+        subtitulo.innerHTML = ''; // Limpiar el contenido
+
+        texto.split('').forEach((letra, index) => {
+            const span = document.createElement('span'); // Crear un span para cada letra
+            
+            // Si es un espacio, no agregar contenido, solo un span vacío
+            if (letra === ' ') {
+                span.textContent = '\u00A0'; // Añadir un espacio no rompible
+            } else {
+                span.textContent = letra; // Asignar la letra al span
+            }
+
+            span.classList.add('letra'); // Añadir la clase de letra
+            subtitulo.appendChild(span); // Agregar el span al subtitulo
+
+            // Animar cada letra después de un tiempo escalonado
+            setTimeout(() => {
+                span.style.opacity = 1; // Cambiar la opacidad para mostrar la letra
+                span.style.color = '#d9534f'; // Cambiar el color
+            }, index * 1000); // Tiempo escalonado (200ms entre letras)
+        });
+    });
+</script>
+<script src="js/lunarTrail.js" defer></script>
+<script src="js/nav.js" defer></script>
+</body>
+</html>

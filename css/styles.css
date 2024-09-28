@@ -1,0 +1,200 @@
+/* Variables de color */
+:root {
+    --azul-oscuro: #1a2b4e; /* Azul oscuro para fondos */
+    --azul-claro: #dfe9f3; /* Azul casi blanco para textos */
+    --azul-resaltado: #a1c9f4; /* Azul resaltado para hover y elementos destacados */
+    --blanco: #fff; /* Blanco puro para contrastes */
+}
+
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    /*cursor: url('../assets/luna-cursor.png'), auto;*/
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--azul-oscuro);
+    padding: 10px 20px;
+    position: relative;
+}
+
+/* Logo en el lado izquierdo */
+header .logo img {
+    width: 100px;
+    margin-right: 20px; /* Espacio entre logo y menú */
+}
+
+/* Centrando el menú de navegación */
+nav {
+    flex-grow: 1; /* Permite que el nav ocupe todo el espacio disponible */
+    display: flex;
+    justify-content: center; /* Centra el menú */
+    position: relative; /* Necesario para el menú desplegable */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    transition: max-height 0.4s ease; /* Añadimos transición */
+}
+
+/* Cambiamos el comportamiento del menú para pantallas grandes */
+nav ul {
+    max-height: none; /* Elimina la limitación en pantallas grandes */
+    overflow: visible; /* Permite que el contenido sea visible */
+}
+
+nav ul.show {
+    max-height: 500px; /* Un alto razonable cuando está visible */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--azul-claro); /* Cambiar el color del texto */
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: lowercase;
+    padding: 10px 15px; /* Agregar un poco de padding para mejor clickabilidad */
+    transition: color 0.3s ease; /* Suavizar el cambio de color */
+}
+
+nav ul li a:hover {
+    color: var(--azul-resaltado); /* Color al pasar el ratón */
+}
+
+/* Iconos sociales en la derecha */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 20px;
+}
+
+/* Estilo para el botón del menú */
+.menu-toggle {
+    display: none; /* Ocultar por defecto */
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Iconos del menú */
+.menu-icon {
+    width: 25px;
+    height: 3px;
+    background-color: var(--azul-claro);
+    margin: 3px 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        left: 0; /* Asegúrate de que el menú se estire de un lado al otro */
+        background: var(--azul-oscuro);
+        width: 100%; /* Asegúrate de que ocupe todo el ancho */
+        top: 60px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        z-index: 10; /* Mantener por encima del hero */
+        padding: 0; /* Asegúrate de que no haya padding que afecte el ancho */
+        margin: 0; /* Elimina márgenes que puedan reducir el ancho */
+    }
+
+    nav ul.show {
+        max-height: 500px; /* Ajusta esto según sea necesario */
+    }
+
+    .menu-toggle {
+        display: flex;
+        z-index: 11; /* Asegúrate de que el botón también esté por encima */
+    }
+}
+
+/* Botones */
+.cta-button {
+    padding: 10px 20px;
+    background-color: var(--azul-resaltado);
+    color: var(--blanco);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: lowercase;
+}
+
+.cta-button:hover {
+    background-color: var(--blanco);
+    color: var(--azul-oscuro);
+}
+
+/* Footer */
+footer {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Esto permite que los elementos se reorganicen en líneas cuando sea necesario */
+}
+
+.footer-content,
+.footer-page,
+.footer-social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-page a, .footer-social-icons a {
+    color: var(--azul-claro);
+    text-decoration: none;
+}
+
+.footer-page a:hover, .footer-social-icons a:hover {
+    color: var(--azul-resaltado);
+}
+
+.footer-social-icons img {
+    width: 20px;
+    margin-left: 10px;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column; /* Cambiamos a disposición vertical */
+        text-align: center;
+    }
+
+    .footer-content, 
+    .footer-page {
+        margin-bottom: 10px; /* Añadimos un pequeño margen entre las líneas */
+    }
+
+    .footer-social-icons {
+        margin-top: 10px; /* Espacio entre el texto y los iconos de redes sociales */
+    }
+}

@@ -35,80 +35,103 @@
     }
 }
 
-
 /* Sección Próximamente */
 .proximamente {
-    background-color: var(--azul-claro); /* Fondo claro para la sección */
-    padding: 70px 20px; /* Espaciado mayor */
-    text-align: center; /* Centrar el contenido */
-    flex: 1; /* Permite que esta sección ocupe el espacio disponible */
+    background-color: var(--azul-claro);
+    padding: 70px 20px;
+    text-align: center;
+    flex: 1;
 }
 
 /* Título de la sección */
 .titulo-proximamente {
-    font-size: 6rem; /* Tamaño del título más grande */
-    color: var(--azul-oscuro); /* Color oscuro */
-    margin-bottom: 30px; /* Espacio debajo del título */
-    text-transform: uppercase; /* Título en mayúsculas */
+    font-size: 6rem;
+    color: var(--azul-oscuro);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    word-wrap: break-word; /* Permite que las palabras largas se dividan en líneas */
 }
 
 /* Subtítulos */
 .subtitulo-proximamente {
-    font-size: 3rem; /* Tamaño de los subtítulos más grande */
-    color: var(--azul-oscuro); /* Color oscuro para los subtítulos */
-    margin: 20px 0; /* Espaciado entre subtítulos */
+    font-size: 3rem;
+    color: var(--azul-oscuro);
+    margin: 20px 0;
 }
 
 /* Subtítulo gracioso */
 .subtitulo-graciosa {
-    font-size: 2.5rem; /* Tamaño de los subtítulos graciosos más grande */
-    color: var(--rojo); /* Color rojo */
-    margin: 20px 0; /* Espaciado */
-    overflow: hidden; /* Evita que las letras se desborden */
-}
-
-/* Animación de letras */
-.letras-animadas {
-    display: inline-block; /* Permite aplicar la animación a cada letra */
-}
-
-.letra {
-    display: inline-block; /* Para que cada letra se mueva por separado */
-    opacity: 0; /* Comienza invisible */
-    transition: opacity 0.5s ease; /* Transición suave */
+    font-size: 2.5rem;
+    color: var(--rojo);
+    margin: 20px 0;
+    overflow: hidden;
+    word-wrap: break-word; /* Permite que las palabras largas se dividan en líneas */
 }
 
 /* GIF de persona trabajando lentamente */
 .gif-trabajando {
-    margin-top: 30px; /* Espaciado mayor encima del GIF */
+    margin-top: 30px;
 }
 
 .gif-trabajando img {
-    max-width: 600px; /* Tamaño máximo del GIF */
-    width: 100%; /* Para que se ajuste en pantallas más pequeñas */
-    height: auto; /* Mantiene la proporción */
+    max-width: 600px;
+    width: 100%;
+    height: auto;
 }
 
 /* Emoticono de obras */
 .emoticono-obras {
-    font-size: 3rem; /* Tamaño del emoticono */
-    margin-top: 20px; /* Espacio antes del emoticono */
+    font-size: 3rem;
+    margin-top: 20px;
 }
-/* Responsividad */
+
+/* Responsividad para pantallas medianas (tablets) */
 @media (max-width: 768px) {
     .titulo-proximamente {
-        font-size: 3rem; /* Tamaño del título para móviles */
+        font-size: 4rem;
     }
     
     .subtitulo-proximamente {
-        font-size: 2.5rem; /* Tamaño de los subtítulos para móviles */
+        font-size: 2rem;
     }
     
     .subtitulo-graciosa {
-        font-size: 2rem; /* Tamaño del subtítulo gracioso para móviles */
+        font-size: 1.8rem;
+    }
+    
+    .gif-trabajando img {
+        max-width: 400px;
     }
     
     .emoticono-obras {
-        font-size: 3rem; /* Tamaño del emoticono para móviles */
+        font-size: 2.5rem;
+    }
+}
+
+/* Responsividad para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    .proximamente {
+        padding: 50px 10px;
+    }
+    
+    .titulo-proximamente {
+        font-size: 2.5rem; /* Ajuste significativo para móviles */
+    }
+    
+    .subtitulo-proximamente {
+        font-size: 1.5rem; /* Tamaño más pequeño para los subtítulos en móviles */
+    }
+    
+    .subtitulo-graciosa {
+        font-size: 1.3rem; /* Subtítulo gracioso más pequeño */
+        line-height: 1.2;  /* Aumenta el espacio entre líneas para una mejor legibilidad */
+    }
+    
+    .gif-trabajando img {
+        max-width: 100%;
+    }
+    
+    .emoticono-obras {
+        font-size: 1.8rem; /* Ajuste para pantallas pequeñas */
     }
 }

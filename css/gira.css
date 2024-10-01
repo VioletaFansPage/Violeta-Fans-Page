@@ -170,8 +170,6 @@ iframe {
     color: var(--azul-oscuro); /* Texto más claro */
 }
 
-
-
 /* Proximamente */
 .proximamente {
     background-color: var(--azul-claro);
@@ -179,6 +177,7 @@ iframe {
     text-align: center;
 }
 
+/* Estilo para pantallas grandes */
 .titulo-proximamente {
     font-size: 4rem;
     color: #d9534f; /* Rojo suave */
@@ -188,29 +187,30 @@ iframe {
 
 .subtitulo-proximamente {
     font-size: 2rem;
-    color: var(--azul-oscuro); /* Mismo rojo para coherencia */
+    color: var(--azul-oscuro);
     margin-top: 20px;
     text-transform: uppercase;
     letter-spacing: 2px; /* Añade un poco de espacio entre letras */
 }
 
+.circulo-giratorio {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #d9534f;
+    border-top: 5px solid transparent;
+    border-radius: 50%;
+    animation: girar 1s linear infinite;
+    margin: 20px auto;
+}
+
+/* Animaciones */
 @keyframes parpadeo {
     0%, 100% {
         opacity: 1;
     }
     50% {
-        opacity: 0.7; /* Ajuste sutil para el parpadeo */
+        opacity: 0.7;
     }
-}
-
-.circulo-giratorio {
-    width: 50px;
-    height: 50px;
-    border: 5px solid #d9534f; /* Color del círculo */
-    border-top: 5px solid transparent; /* Parte superior transparente */
-    border-radius: 50%; /* Hacerlo circular */
-    animation: girar 1s linear infinite; /* Animación */
-    margin: 20px auto; /* Centrar */
 }
 
 @keyframes girar {
@@ -218,5 +218,40 @@ iframe {
     to { transform: rotate(360deg); }
 }
 
+/* Media Queries */
 
+/* Ajuste para pantallas medianas (tablets, dispositivos medianos) */
+@media (max-width: 768px) {
+    .titulo-proximamente {
+        font-size: 3rem;
+    }
 
+    .subtitulo-proximamente {
+        font-size: 1.5rem;
+    }
+
+    .circulo-giratorio {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Ajuste para pantallas pequeñas (móviles, dispositivos pequeños) */
+@media (max-width: 480px) {
+    .proximamente {
+        padding: 50px 10px;
+    }
+
+    .titulo-proximamente {
+        font-size: 2.5rem;
+    }
+
+    .subtitulo-proximamente {
+        font-size: 1.2rem;
+    }
+
+    .circulo-giratorio {
+        width: 30px;
+        height: 30px;
+    }
+}

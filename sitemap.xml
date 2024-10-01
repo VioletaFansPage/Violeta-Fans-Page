@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- URL de la página principal (index) -->
+  <url>
+    <loc>http://violetafans.es/</loc>
+    <lastmod>2024-10-01</lastmod> <!-- Fecha de la última actualización -->
+    <changefreq>monthly</changefreq> <!-- Frecuencia de cambio -->
+    <priority>1.0</priority> <!-- Prioridad alta para la página principal -->
+  </url>
+
+  <!-- URL de la página biografía -->
+  <url>
+    <loc>http://violetafans.es/biografia</loc>
+    <lastmod>2024-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- URL de la página de contacto -->
+  <url>
+    <loc>http://violetafans.es/contacto</loc>
+    <lastmod>2024-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- URL de la página de gira -->
+  <url>
+    <loc>http://violetafans.es/gira</loc>
+    <lastmod>2024-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- URL de la página de música -->
+  <url>
+    <loc>http://violetafans.es/musica</loc>
+    <lastmod>2024-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- URL de la página de noticias -->
+  <url>
+    <loc>http://violetafans.es/noticias</loc>
+    <lastmod>2024-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- URL de la página de zona fan -->
+  <url>
+    <loc>http://violetafans.es/zonafan</loc>
+    <lastmod>2024-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- URL de la página próximamente -->
+  <url>
+    <loc>http://violetafans.es/proximamente</loc>
+    <lastmod>2024-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

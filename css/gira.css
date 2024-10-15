@@ -15,7 +15,7 @@
         left: 0; /* Asegúrate de que el menú se estire de un lado al otro */
         background: var(--azul-oscuro);
         width: 100%; /* Asegúrate de que ocupe todo el ancho */
-        top: 60px;
+        top: 130%; 
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.4s ease;
@@ -33,7 +33,6 @@
         z-index: 11; /* Asegúrate de que el botón también esté por encima */
     }
 }
-
 /*Hero*/
 .hero-gira {
     position: relative;

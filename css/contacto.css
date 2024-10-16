@@ -56,55 +56,42 @@
 /* Estilo para el formulario */
 .contact-form {
     display: flex;
-    flex-direction: column; /* Organiza los elementos en columna */
-    align-items: center; /* Centra el formulario */
-    max-width: 400px; /* Limita el ancho máximo del formulario */
-    margin: 0 auto; /* Centra el formulario horizontalmente */
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .contact-form label {
-    margin-bottom: 10px; /* Espacio entre la etiqueta y el campo */
-    text-align: left; /* Alinea el texto de las etiquetas a la izquierda */
-    font-weight: bold; /* Pone las etiquetas en negrita */
-    font-size: 1.2rem; /* Tamaño de fuente */
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--azul-oscuro); /* Color de las etiquetas */
 }
 
-/* Estilos para el select del asunto */
-.contact-form select {
-    width: 100%; /* Ocupa todo el ancho disponible */
-    padding: 10px; /* Espaciado interno */
-    margin-bottom: 20px; /* Espacio entre los campos */
-    border: 1px solid var(--azul-oscuro); /* Borde del campo */
-    border-radius: 5px; /* Bordes redondeados */
-    font-size: 1rem; /* Tamaño de fuente */
-}
-
-/* Estilos para inputs y textareas */
+/* Estilos para todos los campos de texto */
+.contact-form select,
 .contact-form input,
 .contact-form textarea {
-    width: 100%; /* Ocupa todo el ancho disponible */
-    padding: 10px; /* Espaciado interno */
-    margin-bottom: 20px; /* Espacio entre los campos */
-    border: 1px solid var(--azul-oscuro); /* Borde del campo */
-    border-radius: 5px; /* Bordes redondeados */
-    font-size: 1rem; /* Tamaño de fuente */
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--azul-oscuro);
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--azul-oscuro); /* Texto en azul oscuro */
+    background-color: var(--blanco); /* Fondo blanco */
+    font-family: 'Montserrat', sans-serif; /* Fuente uniforme */
 }
 
-/* Estilo uniforme para los placeholders de todos los inputs y textareas */
+/* Estilo uniforme para los placeholders */
 ::placeholder {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--azul-oscuro); /* Cambia este color si prefieres otro */
-    opacity: 0.6; /* Opacidad para el placeholder */
-    font-size: 1rem; /* Tamaño de la fuente */
+    color: var(--azul-oscuro);
+    opacity: 0.6;
+    font-size: 1rem;
 }
 
-input::placeholder,
-textarea::placeholder {
-    font-family: 'Montserrat', sans-serif; /* Asegura que todos usen la misma tipografía */
-    color: var(--azul-oscuro); /* Color placeholder */
-    opacity: 0.6; /* Ajusta la opacidad si es necesario */
-    font-size: 1rem; /* Tamaño uniforme */
-}
 
 /* Estilo del cuadro de mensaje (modal) */
 .message-box {

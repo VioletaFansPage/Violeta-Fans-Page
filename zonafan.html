@@ -65,31 +65,30 @@
     <p>¿No apareces y quieres participar? ¡Te añadimos al mapa!</p>
     <button id="btn-add-city" class="cta-button">Participar</button>
     <!-- Modal del formulario para agregar coordenadas -->
-<div id="modal-form" class="modal" style="display: none;">
-    <div class="modal-content">
-        <span class="close" style="font-size: 1.5rem; cursor: pointer;">&times;</span>
-        <h3 style="display: inline;">Añade tu ubicación al mapa</h3>
-        <p style="font-size: 0.9rem; margin-top: 0;">
-            <a href="https://www.coordenadas-gps.com/" target="_blank" style="text-decoration: none; color: inherit;">Encuentra tus coordenadas aquí</a>
-        </p>
-        <form id="fan-form" action="https://formspree.io/f/xjkvvazg" method="POST">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required placeholder="Introduce tu nombre">
+    <div id="modal-form" class="modal" style="display: none;">
+        <div class="modal-content-map">
+            <span class="close-map" style="font-size: 1.5rem; cursor: pointer;">&times;</span>
+            <h3 style="display: inline;">Añade tu ubicación al mapa</h3>
+            <p style="font-size: 0.9rem; margin-top: 0;">
+                <a href="https://www.coordenadas-gps.com/" target="_blank" style="text-decoration: none; color: inherit;">Encuentra tus coordenadas aquí</a>
+            </p>
+            <form id="fan-form" action="https://formspree.io/f/xjkvvazg" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Introduce tu nombre">
 
-            <label for="latitud-longitud">Latitud y Longitud:</label>
-            <div id="latitud-longitud" style="display: flex; justify-content: space-between;">
-                <input type="text" id="latitud" name="latitud" required placeholder="Latitud" style="width: 48%;">
-                <input type="text" id="longitud" name="longitud" required placeholder="Longitud" style="width: 48%;">
-            </div>
+                <label for="latitud-longitud">Latitud y Longitud:</label>
+                <div id="latitud-longitud" style="display: flex; justify-content: space-between;">
+                    <input type="text" id="latitud" name="latitud" required placeholder="Latitud" style="width: 48%;">
+                    <input type="text" id="longitud" name="longitud" required placeholder="Longitud" style="width: 48%;">
+                </div>
 
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Escribe tu mensaje aquí..."></textarea>
 
-            <button type="submit" class="cta-button">Enviar</button>
-        </form>
+                <button type="submit" class="cta-button">Enviar</button>
+            </form>
+        </div>
     </div>
-</div>
-
 </section>
 
 <section class="playlists">
@@ -120,23 +119,31 @@
     </div>
 </section>
 
-
 <section class="fan-art">
     <h2>Arte de los Fans</h2>
     <h3>Próximamente: una galería con el arte de los fans estará disponible.</h3>
-    <p>Si deseas enviar tu arte, usa el siguiente formulario:</p>
-    <form action="https://formspree.io/f/xldeepvl" method="POST">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-        
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="mensaje">Enlace a tu Fan Art o mensaje:</label>
-        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-        
-        <button type="submit" class="cta-button">Enviar mi Fan Art</button>
-    </form>
+    <p>Si deseas enviar tu arte, pulsa el siguiente botón:</p>
+    <button id="btn-participar-art" class="cta-button">Participar</button> <!-- Botón para mostrar el formulario -->
+    
+    <!-- Modal del formulario para enviar arte -->
+    <div id="modal-art-form" class="modal" style="display: none;">
+        <div class="modal-content-art">
+            <span class="close-art" style="font-size: 1.5rem; cursor: pointer;">&times;</span>
+            <h3 style="display: inline;">Añade los datos para enviar tu arte</h3>
+            <form id="fan-art-form" action="https://formspree.io/f/xldeepvl" method="POST">
+                <label for="nombre-art">Nombre:</label>
+                <input type="text" id="nombre-art" name="nombre" required placeholder="Introduce tu nombre">
+                
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required placeholder="Introduce tu correo">
+                
+                <label for="mensaje-art">Enlace a tu Fan Art:</label>
+                <textarea id="mensaje-art" name="mensaje" rows="4" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                
+                <button type="submit" class="cta-button">Enviar mi Fan Art</button>
+            </form>
+        </div>
+    </div>
 </section>
 
 <section class="zona-fan-twitter">
@@ -176,7 +183,8 @@
 
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
     <script src="js/nav.js"></script>
-    <script src="js/modal.js"></script>
+    <script src="js/modalMap.js"></script>
+    <script src="js/modalArt.js"></script>
     <script src="js/mapfans.js"></script> <!-- Asegúrate de cargar esto al final -->
 </body>
 </html>

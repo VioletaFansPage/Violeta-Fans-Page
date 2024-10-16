@@ -171,6 +171,11 @@ iframe {
     text-align: center; /* Centrar el título */
 }
 
+.zona-fans p {
+    margin-bottom: 30px; /* Aumentar espacio entre el párrafo y el mapa */
+    color: var(--azul-oscuro);
+}
+
 #mapa-fans {
     height: 400px;
     width: 90%; /* Ajuste para que ocupe menos del ancho total */
@@ -178,9 +183,5 @@ iframe {
     margin: 0 auto; /* Centramos el mapa */
     border-radius: 10px;
     border: 0.25px solid var(--azul-oscuro);
-}
-
-.zona-fans p {
-    margin-bottom: 30px; /* Aumentar espacio entre el párrafo y el mapa */
-    color: var(--azul-oscuro);
+    margin-bottom: 30px; 
 }

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const modal = document.getElementById("modal-form");
     const btnAddCity = document.getElementById("btn-add-city");
-    const spanClose = document.getElementsByClassName("close")[0];
+    const spanCloseMap = document.getElementsByClassName("close-map")[0]; // Cambia a close-map
     const form = document.getElementById("fan-form");
 
     // Abrir el modal al hacer clic en "Participar"
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Cerrar el modal al hacer clic en la "X"
-    spanClose.addEventListener("click", () => {
+    spanCloseMap.addEventListener("click", () => {
         modal.style.display = "none";
     });
 
@@ -38,21 +38,14 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(response => {
             if (response.ok) {
-                // Si el envío fue exitoso, mostrar un mensaje de confirmación
                 alert("Hemos recibido tus datos para incluirlos en el mapa. Revisaremos tu mensaje y si todo está bien, se publicará próximamente.");
-                
-                // Opcional: cerrar el modal después de mostrar el mensaje
-                modal.style.display = "none";
-
-                // Limpiar los campos del formulario
-                form.reset();
+                modal.style.display = "none"; // Cerrar el modal
+                form.reset(); // Limpiar el formulario
             } else {
-                // Si hubo un error, mostrar un mensaje de error
                 alert("Hubo un problema con el envío de tu mensaje. Por favor, inténtalo de nuevo.");
             }
         })
         .catch(error => {
-            // Manejar cualquier error de la red
             alert("Error en la conexión. Por favor, inténtalo más tarde.");
             console.error("Error:", error);
         });

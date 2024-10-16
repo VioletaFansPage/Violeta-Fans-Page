@@ -115,7 +115,7 @@
 }
 
 /* Estilo para el formulario */
-.modal-content {
+.modal-content-map {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -123,7 +123,7 @@
     margin: 0 auto;
 }
 
-.modal-content label {
+.modal-content-map label {
     margin-bottom: 10px;
     text-align: left;
     font-weight: bold;
@@ -132,9 +132,9 @@
 }
 
 /* Estilos para todos los campos de texto */
-.modal-content select,
-.modal-content input,
-.modal-content textarea {
+.modal-content-map select,
+.modal-content-map input,
+.modal-content-map textarea {
     width: calc(100% - 20px); /* Mantener espacio para el padding */
     padding: 10px;
     margin-bottom: 20px;
@@ -154,27 +154,27 @@
 }
 
 /* Estilo del enlace "Encuentra tus coordenadas aquí" */
-.modal-content a {
+.modal-content-map a {
     text-decoration: none; /* Eliminar subrayado */
     color: inherit; /* Usar el color de texto por defecto */
 }
 
 /* Ajustes visuales del formulario */
-.modal-content {
+.modal-content-map {
     display: flex;
     flex-direction: column;
     max-width: 400px;
     margin: 0 auto;
 }
 
-.modal-content label {
+.modal-content-map label {
     margin-bottom: 5px;
     font-size: 0.9rem;
     color: var(--azul-oscuro);
 }
 
-.modal-content input,
-.modal-content textarea {
+.modal-content-map input,
+.modal-content-map textarea {
     width: 100%;
     padding: 8px;
     margin-bottom: 15px;
@@ -183,29 +183,29 @@
     font-size: 0.9rem;
 }
 
-.modal-content #latitud-longitud {
+.modal-content-map #latitud-longitud {
     display: flex;
     justify-content: space-between;
 }
 
-.modal-content #latitud,
-.modal-content #longitud {
+.modal-content-map #latitud,
+.modal-content-map #longitud {
     width: 48%; /* Ancho reducido para estar en una misma línea */
 }
 /* 
 Estilo para la X de cerrar */
-.close {
+.close-map {
     font-size: 2rem; /* Aumenta el tamaño */
     color: var(--azul-oscuro); /* Cambia el color a azul oscuro */
 }
 
-.close:hover {
+.close-map:hover {
     color: var(--azul-resaltado); /* Cambia a un azul más claro al pasar el ratón */
 }
 /* Ajustes para el layout del formulario en dispositivos móviles */
 @media (max-width: 600px) {
-    .modal-content #latitud,
-    .modal-content #longitud {
+    .modal-content-map #latitud,
+    .modal-content-map #longitud {
         width: 100%; /* Ancho completo en pantallas pequeñas */
         margin-right: 0;
     }
@@ -360,6 +360,85 @@ Estilo para la X de cerrar */
     margin-top: 10px;
     color: var(--gris-oscuro);
 }
+/* Estilo para el formulario */
+.modal-content-art {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.modal-content-art label {
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--azul-oscuro);
+}
+
+/* Estilos para todos los campos de texto */
+.modal-content-art select,
+.modal-content-art input,
+.modal-content-art textarea {
+    width: calc(100% - 20px); /* Mantener espacio para el padding */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--azul-oscuro);
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--azul-oscuro);
+    background-color: var(--blanco);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Estilo uniforme para los placeholders */
+::placeholder {
+    color: var(--azul-oscuro);
+    opacity: 0.6;
+    font-size: 1rem;
+}
+
+/* Estilo del enlace "Encuentra tus coordenadas aquí" */
+.modal-content-art a {
+    text-decoration: none; /* Eliminar subrayado */
+    color: inherit; /* Usar el color de texto por defecto */
+}
+
+/* Ajustes visuales del formulario */
+.modal-content-art {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.modal-content-art label {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: var(--blanco);
+}
+
+.modal-content-art input,
+.modal-content-art textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid var(--azul-oscuro);
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+/* 
+Estilo para la X de cerrar */
+.close-art {
+    font-size: 2rem; /* Aumenta el tamaño */
+    color: var(--azul-claro); /* Cambia el color a azul oscuro */
+}
+
+.close-art:hover {
+    color: var(--azul-resaltado); /* Cambia a un azul más claro al pasar el ratón */
+}
 
 /* Redes cuenta oficiales */
 .zona-fan-twitter {
@@ -416,3 +495,4 @@ Estilo para la X de cerrar */
         margin: 0 15px; /* Espacio horizontal entre las cuentas */
     }
 }
+

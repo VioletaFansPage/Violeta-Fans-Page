@@ -72,6 +72,54 @@
     margin-bottom: 35px;
 }
 
+/* Sección de Videos */
+.videos-section {
+    padding: 40px 20px;
+    background-color: var(--azul-claro);
+}
+
+.videos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Igual que en noticias */
+    gap: 20px;
+    max-width: 1200px; /* Limitar el ancho máximo */
+    margin: 0 auto; /* Centrar la sección */
+}
+
+.video-card {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 66.67%; /* Relación de aspecto 4:3 (similar a la altura de las imágenes de noticias) */
+    height: 0;
+    border-radius: 10px; /* Bordes redondeados, igual que las noticias */
+    box-shadow: 0 4px 8px rgba(172, 217, 238, 0.2); /* Sombra similar a las noticias */
+}
+
+.video-card iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; /* Redondear los bordes del iframe */
+}
+
+/* Ajustes Responsivos */
+@media (max-width: 1024px) {
+    .videos-container {
+        grid-template-columns: repeat(2, 1fr); /* Igual que las noticias */
+        max-width: 800px; /* Ajustar el ancho máximo en tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .videos-container {
+        grid-template-columns: 1fr; /* Videos a una columna en móvil */
+        max-width: 100%; /* Ocupa todo el ancho en móvil */
+    }
+}
+
+
 /* Sección de noticias */
 .news-section {
     padding: 40px 20px;

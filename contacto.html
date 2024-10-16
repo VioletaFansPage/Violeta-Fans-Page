@@ -186,26 +186,22 @@
         const fanMapField = document.getElementById('fanMapCoordenate');
         const otherSubjectField = document.getElementById('otherSubject');
 
+        // Ocultar todos los campos primero
+        fanArtField.style.display = 'none';
+        fanMapField.style.display = 'none';
+        otherSubjectField.style.display = 'none';
+
+        // Mostrar el campo correspondiente según la opción seleccionada
         if (selectedOption === 'Eliminar Fan Art') {
             fanArtField.style.display = 'block';
-            fanMapField.style.display = 'none';
-            otherSubjectField.style.display = 'none';
-        } 
-        if (selectedOption === 'Eliminar Mapa') {
-            fanArtField.style.display = 'none';
+        } else if (selectedOption === 'Eliminar Mapa') {
             fanMapField.style.display = 'block';
-            otherSubjectField.style.display = 'none';
-        }else if (selectedOption === 'Otro') {
-            fanArtField.style.display = 'none';
-            fanMapField.style.display = 'none';
+        } else if (selectedOption === 'Otro') {
             otherSubjectField.style.display = 'block';
-        } else {
-            fanArtField.style.display = 'none';
-            fanMapField.style.display = 'none';
-            otherSubjectField.style.display = 'none';
         }
     });
 </script>
+
 
 <!-- Script para manejar el envío del formulario y mostrar el mensaje -->
 <script>

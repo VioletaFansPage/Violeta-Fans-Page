@@ -1,0 +1,142 @@
+/* Reseteo de estilos para un diseño más uniforme */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #dfe9f3;
+  color: #1a2b4e;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Cambiado a flex-start para que los elementos no se centren verticalmente */
+  height: auto; /* Cambiar la altura a auto para permitir el desplazamiento */
+  padding: 20px;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: #004e92;
+  margin-bottom: 10px;
+}
+
+h2 {
+  text-align: center;
+  color: #0072bb;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #004e92;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center; /* Centrar los botones */
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Permitir que los botones se envuelvan */
+}
+
+button {
+  background-color: #004e92;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin: 5px; /* Espacio entre botones */
+  flex: 1; /* Permitir que los botones crezcan igual */
+  min-width: 120px; /* Ancho mínimo para los botones */
+}
+
+button:hover {
+  background-color: #0072bb;
+}
+
+.back-button-container {
+  text-align: center; /* Centrar el botón de volver */
+  margin-top: 20px; /* Separación arriba */
+}
+
+#backButton {
+  font-size: 24px;
+  color: #1a2b4e;
+  text-decoration: none;
+}
+
+.song {
+  margin-bottom: 15px;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .button-group {
+    flex-direction: column; /* Apilar botones en móviles */
+    align-items: center; /* Centrar botones en columna */
+  }
+
+  button {
+    width: 100%; /* Botones ocupan todo el ancho en móviles */
+    min-width: auto; /* Eliminar ancho mínimo en móviles */
+  }
+}
+
+/* Estilos para dispositivos menores a 480px */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px; /* Ajustar tamaño del título */
+  }
+
+  h2 {
+    font-size: 14px; /* Ajustar tamaño del subtítulo */
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    font-size: 14px; /* Reducir tamaño de fuente en inputs */
+  }
+
+  button {
+    font-size: 14px; /* Reducir tamaño de fuente en botones */
+  }
+
+  .song input {
+    padding: 8px; /* Ajustar padding de los inputs de canciones */
+  }
+}

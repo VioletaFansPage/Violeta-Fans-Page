@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Predice el Disco de Violeta!</title> <!-- Título breve pero descriptivo -->
+  <link rel="icon" href="../assets/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/discostyless.css"> <!-- Link al archivo CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome para iconos -->
+</head>
+<body>
+  <div class="container">
+    <!-- Título y subtítulo -->
+    <h1>¡Predice el Disco de Violeta!</h1> <!-- Título atractivo -->
+    <h2>¿Acertarás el título y las canciones de su primer disco? ¡Participa y comprueba en el futuro si tus ideas tenían sentido!</h2> <!-- Subtítulo actualizado -->
+
+    <form id="predictionForm" action="https://formspree.io/f/mdkooynj" method="POST">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" placeholder="Nombre" required>
+      
+      <label for="email">Email de contacto:</label>
+      <input type="email" id="email" name="email" placeholder="Correo electronico" required>
+      
+      <label for="twitter">Twitter (opcional):</label>
+      <input type="text" id="twitter" name="twitter" placeholder="Usuario de X">
+      
+      <label for="instagram">Instagram (opcional):</label>
+      <input type="text" id="instagram" name="instagram" placeholder="Usuario de Instagram">
+      
+      <label for="albumName">Nombre del disco:</label>
+      <input type="text" id="albumName" name="albumName" placeholder="Nombre del disco" required>
+      
+      <label>Setlist del disco:</label>
+      <div id="songsList">
+        <div class="song">
+          <input type="text" name="song[]" placeholder="Canción 1" required>
+        </div>
+      </div>
+      <div class="button-group"> <!-- Agrupamos los botones -->
+        <button type="button" id="addSongButton">Añadir canción</button>
+        <button type="submit">Enviar predicción</button>
+        <button type="button" id="removeSongButton">Eliminar canción</button> <!-- Botón para eliminar la última canción -->
+      </div>
+    </form>
+    <div id="confirmationMessage" style="display: none; text-align: center; margin-top: 20px;">Hemos recibido tus predicciones. ¡Gracias por participar!</div>
+    <!-- Botón de "Volver atrás" con icono -->
+    <div class="back-button-container"> <!-- Contenedor para centrar el botón -->
+      <a href="../zonafan.html" id="backButton"><i class="fas fa-arrow-left"></i></a>
+    </div>
+    
+    <div id="message"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

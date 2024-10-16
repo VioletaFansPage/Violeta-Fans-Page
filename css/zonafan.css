@@ -37,11 +37,14 @@
 
 .hero {
     position: relative;
+    height: 50vh;
     background-image: url('../assets/violeta-hero.jpg'); /* Cambia esta ruta a la imagen real */
     background-size: cover;
     background-position: center;
-    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
     color: var(--blanco);
+    align-items: center;
     text-align: center;
 }
 
@@ -68,53 +71,186 @@
     font-size: 1.5rem;
 }
 
+/*Zona Mapa */
 .mapa-fans {
-    padding: 50px;
-    background-color: var(--gris-claro);
+    background-color: var(--azul-claro);
+    padding: 50px 20px;
     text-align: center;
 }
 
+.mapa-fans h2{
+    font-size: 2rem;
+    color: var(--azul-oscuro);
+    margin-bottom: 40px; /* Aumentamos el espacio con las noticias */
+    text-transform: uppercase; /* Cambiado a mayúsculas */
+}
+
+.mapa-fans h3 {
+    font-size: 1.5rem;
+    color: var(--azul-oscuro);
+    margin-bottom: 20px;
+    text-decoration: none; /* Quitamos el subrayado */
+}
+
 .mapa-container {
-    height: 400px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+    justify-content: center;
 }
 
 .mapa-fans p {
-    color: var(--gris-oscuro);
+    font-size: 1rem;
+    color: var(--azul-oscuro);
+    margin-top: 20px;
     margin-bottom: 20px;
+    text-decoration: none; /* Quitamos el subrayado */
 }
 
-#btn-add-city {
-    background-color: var(--azul-resaltado);
-    color: var(--blanco);
-    padding: 10px 20px;
+/* Estilo del contenedor del mapa */
+#mapa-fans {
+    height: 500px; /* Define una altura para el contenedor */
+    width: 100%;
+    margin: 0 auto; /* Centramos el mapa */
+    border-radius: 10px;
+    border: 0.255px solid var(--azul-oscuro);
+}
+
+/* Estilo para el formulario */
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.modal-content label {
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--azul-oscuro);
+}
+
+/* Estilos para todos los campos de texto */
+.modal-content select,
+.modal-content input,
+.modal-content textarea {
+    width: calc(100% - 20px); /* Mantener espacio para el padding */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--azul-oscuro);
     border-radius: 5px;
-    cursor: pointer;
+    font-size: 1rem;
+    color: var(--azul-oscuro);
+    background-color: var(--blanco);
+    font-family: 'Montserrat', sans-serif;
 }
 
-#btn-add-city:hover {
-    background-color: var(--azul-oscuro);
-    color: var(--blanco);
+/* Estilo uniforme para los placeholders */
+::placeholder {
+    color: var(--azul-oscuro);
+    opacity: 0.6;
+    font-size: 1rem;
 }
 
+/* Estilo del enlace "Encuentra tus coordenadas aquí" */
+.modal-content a {
+    text-decoration: none; /* Eliminar subrayado */
+    color: inherit; /* Usar el color de texto por defecto */
+}
+
+/* Ajustes visuales del formulario */
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.modal-content label {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: var(--azul-oscuro);
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid var(--azul-oscuro);
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.modal-content #latitud-longitud {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-content #latitud,
+.modal-content #longitud {
+    width: 48%; /* Ancho reducido para estar en una misma línea */
+}
+/* 
+Estilo para la X de cerrar */
+.close {
+    font-size: 2rem; /* Aumenta el tamaño */
+    color: var(--azul-oscuro); /* Cambia el color a azul oscuro */
+}
+
+.close:hover {
+    color: var(--azul-resaltado); /* Cambia a un azul más claro al pasar el ratón */
+}
+/* Ajustes para el layout del formulario en dispositivos móviles */
+@media (max-width: 600px) {
+    .modal-content #latitud,
+    .modal-content #longitud {
+        width: 100%; /* Ancho completo en pantallas pequeñas */
+        margin-right: 0;
+    }
+}
+
+/*Listas playlist*/
 .playlists {
     background-color: var(--azul-oscuro);
     color: var(--blanco);
     padding: 50px 20px;
 }
 
+.playlists h2{
+    font-size: 2rem;
+    color: var(--blanco);
+    margin-bottom: 40px; /* Espacio entre el título y los reproductores */
+    text-transform: uppercase; /* Título en mayúsculas */
+}
+
 .playlist-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 20px; /* Espacio entre el reproductor de Spotify y el de YouTube */
+    flex-wrap: wrap;
 }
 
 .playlist-container iframe {
     border-radius: 12px;
 }
 
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .playlist-container {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas para tabletas */
+    }
+}
+
+@media (max-width: 768px) {
+    .playlist-container {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+}
+
+/*Concursos*/
 .concursos {
     background-color: var(--azul-claro);
     padding: 50px 20px;
@@ -122,35 +258,86 @@
 }
 
 .concursos h2 {
+    font-size: 2rem;
     color: var(--azul-oscuro);
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 40px; /* Aumentamos el espacio con las noticias */
+    text-transform: uppercase; /* Cambiado a mayúsculas */
 }
 
+.concursos-container {
+    display: flex;
+    justify-content: center; /* Centra los recuadros horizontalmente */
+    gap: 30px; /* Espaciado entre los recuadros */
+    margin-top: 20px; /* Espaciado superior para la sección */
+}
+
+.concurso {
+    background-color: var(--azul-claro); /* Color de fondo igual al de la sección */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    flex: 1; /* Para que los recuadros ocupen el mismo espacio */
+    max-width: 500px; /* Ancho máximo para los recuadros */
+}
+
+.concursos h3 {
+    margin: 15px 0;
+    font-size: 1.5rem; /* Aumentar el tamaño de fuente */
+    text-decoration: none; /* Quitamos el subrayado */
+    color: var(--azul-oscuro);
+}
+
+.concursos h4 {
+    margin: 15px 0;
+    font-size: 1.2rem; /* Aumentar el tamaño de fuente */
+    text-decoration: none; /* Quitamos el subrayado */
+    color: #546a96
+}
 .concursos p {
-    color: var(--gris-oscuro);
-    font-size: 1.2rem;
-    margin-bottom: 35px;
+    font-size: 1rem;
+    color: var(--azul-oscuro);
+    margin-bottom: 20px; /* Aumentar el margen inferior */
 }
 
 .cta-button {
-    padding: 10px 20px;
-    background-color: var(--azul-resaltado);
-    color: var(--blanco);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    display: inline-block; /* Asegura que el botón sea un bloque */
+    margin-bottom: 10px; /* Margen inferior para el botón */
 }
 
-.cta-button:hover {
-    background-color: var(--blanco);
-    color: var(--azul-oscuro);
+/* Responsivo */
+@media (max-width: 768px) {
+    .concursos-container {
+        flex-direction: column; /* Cambiar a columna en dispositivos más pequeños */
+        align-items: center; /* Centra los recuadros en dispositivos pequeños */
+    }
 }
 
+/*Fan Art*/
 .fan-art {
-    background-color: var(--gris-claro);
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
     padding: 50px 20px;
-    text-align: center;
+}
+
+.fan-art h2 {
+    font-size: 2rem;
+    color: var(--blanco);
+    margin-bottom: 40px; /* Espacio entre el título y los reproductores */
+    text-transform: uppercase; /* Título en mayúsculas */
+}
+
+.fan-art h3 {
+    font-size: 1.5rem;
+    color: var(--blanco);
+    margin-bottom: 20px;
+    text-decoration: none; /* Quitamos el subrayado */
+}
+
+.fan-art p {
+    font-size: 1rem;
+    color: var(--blanco);
+    margin-bottom: 20px;
+    text-decoration: none; /* Quitamos el subrayado */
 }
 
 .fan-art-gallery {
@@ -174,19 +361,58 @@
     color: var(--gris-oscuro);
 }
 
+/* Redes cuenta oficiales */
 .zona-fan-twitter {
-    background-color: var(--gris-claro);
+    background-color: var(--azul-claro);
     padding: 50px 20px;
     text-align: center;
 }
 
-.twitter-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    justify-items: center;
+.zona-fan-twitter h2 {
+    font-size: 2rem;
+    color: var(--azul-oscuro);
+    margin-bottom: 40px; /* Espacio entre el título y los reproductores */
+    text-transform: uppercase; 
 }
 
-.twitter-embed {
-    width: 300px;
+.zona-fan-twitter h3 {
+    margin: 15px 0;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-decoration: none; /* Quitamos el subrayado */
+    color: var(--azul-oscuro); /* Espacio entre el subtítulo y las cuentas */
+}
+
+.twitter-accounts {
+    display: flex;
+    flex-direction: column; /* Coloca las cuentas en columna */
+    align-items: center; /* Centra las cuentas */
+}
+
+.twitter-account {
+    background-color: var(--blanco);
+    color: var(--azul-oscuro);
+    padding: 10px 20px; /* Espacio alrededor del texto */
+    border-radius: 8px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 1rem; /* Tamaño de la fuente */
+    margin: 20px 0; /* Espacio entre las cuentas */
+    transition: background-color 0.3s; /* Transición suave al hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+}
+
+.twitter-account:hover {
+    background-color: var(--azul-oscuro); /* Cambio de fondo al pasar el mouse */
+    color: var(--blanco); /* Cambia el color del texto */
+}
+
+/* Estilos responsivos */
+@media (min-width: 768px) {
+    .twitter-accounts {
+        flex-direction: row; /* En pantallas grandes, coloca las cuentas en fila */
+        justify-content: center; /* Centra las cuentas */
+    }
+    .twitter-account {
+        margin: 0 15px; /* Espacio horizontal entre las cuentas */
+    }
 }

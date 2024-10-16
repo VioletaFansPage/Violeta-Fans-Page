@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página web de fans dedicada a Violeta, una artista emergente española.">
+    <title>VIOLETA - Zona Fan</title>
+
+    <link rel="stylesheet" href="css/zonafan.css">
+    <link rel="stylesheet" href="css/lunarTrail.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="assets/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" crossorigin=""/>
+</head>
+<body id="top">
+<header>
+    <div class="logo">
+        <img src="assets/logo-violeta.png" alt="VIOLETA Logo">
+    </div>
+    <nav>
+        <button class="menu-toggle" aria-label="Abrir Menú">
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+        </button>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="biografia.html">Biografía</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="musica.html">Música</a></li>
+            <li><a href="gira.html">Gira</a></li>
+            <li><a href="zonafan.html">Zona-Fan</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/violetahodar" target="_blank">
+            <img src="assets/instagram-icon.png" alt="Instagram">
+        </a>
+        <a href="https://x.com/HFVioleta" target="_blank">
+            <img src="assets/twitter-icon.png" alt="Twitter">
+        </a>
+        <a href="https://www.tiktok.com/@hodarvioleta" target="_blank">
+            <img src="assets/tiktok-icon.png" alt="TikTok">
+        </a>
+        <a href="https://whatsapp.com/channel/0029VajuudwBqbrGLRqDPw2P" target="_blank">
+            <img src="assets/whatsapp-icon.png" alt="WhatsApp">
+        </a>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+        <h1>Bienvenidos a la Zona Fan</h1>
+        <p>¡Un espacio exclusivo para los verdaderos fans de Violeta!</p>
+    </div>
+</section>
+
+<section class="mapa-fans">
+    <h2>Mapa de Fans</h2>
+    <h3>Descubre dónde están los fans de Violeta alrededor del mundo.</h3>
+    <div id="mapa-fans" class="mapa-container"></div> <!-- Aquí es donde aparece el mapa -->
+    <p>¿No apareces y quieres participar? ¡Te añadimos al mapa!</p>
+    <button id="btn-add-city" class="cta-button">Participar</button>
+    <!-- Modal del formulario para agregar coordenadas -->
+<div id="modal-form" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close" style="font-size: 1.5rem; cursor: pointer;">&times;</span>
+        <h3 style="display: inline;">Añade tu ubicación al mapa</h3>
+        <p style="font-size: 0.9rem; margin-top: 0;">
+            <a href="https://www.coordenadas-gps.com/" target="_blank" style="text-decoration: none; color: inherit;">Encuentra tus coordenadas aquí</a>
+        </p>
+        <form id="fan-form" action="https://formspree.io/f/xjkvvazg" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Introduce tu nombre">
+
+            <label for="latitud-longitud">Latitud y Longitud:</label>
+            <div id="latitud-longitud" style="display: flex; justify-content: space-between;">
+                <input type="text" id="latitud" name="latitud" required placeholder="Latitud" style="width: 48%;">
+                <input type="text" id="longitud" name="longitud" required placeholder="Longitud" style="width: 48%;">
+            </div>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Escribe tu mensaje aquí..."></textarea>
+
+            <button type="submit" class="cta-button">Enviar</button>
+        </form>
+    </div>
+</div>
+
+</section>
+
+<section class="playlists">
+    <h2>Playlists para ti</h2>
+    <div class="playlist-container">
+        <!-- Playlist embeds de Spotify -->
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0FJ81tsIMFuGpUXTQiwwX1?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1E4vFIdUPEBEXV?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2D2nIyo1NKl6sBUKBlEQ0b?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2qA3d0cE0MZTejP1kL1WXI?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+</section>
+
+<section class="concursos">
+    <h2>Concursos y Sorpresas</h2>
+    <h3>¡Conoce los concursos que hemos preparado y haz brillar tu creatividad en el fandom!</h3>
+    <div class="concursos-container">
+        <div class="concurso">
+            <h4>¿Te atreves a anticipar cómo será el primer disco de Violeta?</h4> 
+            <p>¡Despliega tu creatividad y comparte cómo imaginas el nuevo disco!</p>
+            <a href="proximamente.html" class="cta-button">¡Participa Ahora!</a>
+        </div>
+        <div class="concurso">
+            <h4>¿Puedes imaginar el setlist para cada concierto de la gira de Violeta?</h4> 
+            <p>Envía tus predicciones y acumula puntos por cada acierto.</p>
+            <a href="proximamente.html" class="cta-button">¡Participa Ahora!</a>
+        </div>
+    </div>
+</section>
+
+
+<section class="fan-art">
+    <h2>Arte de los Fans</h2>
+    <h3>Próximamente: una galería con el arte de los fans estará disponible.</h3>
+    <p>Si deseas enviar tu arte, usa el siguiente formulario:</p>
+    <form action="https://formspree.io/f/xldeepvl" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="mensaje">Enlace a tu Fan Art o mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        
+        <button type="submit" class="cta-button">Enviar mi Fan Art</button>
+    </form>
+</section>
+
+<section class="zona-fan-twitter">
+    <h2>No te pierdas las novedades de Violeta</h2>
+    <h3>Sigue a estas cuentas para estar al tanto de todo:</h3>
+    <div class="twitter-accounts">
+        <a href="https://x.com/vissidvioleta23" target="_blank" class="twitter-account">@vissidvioleta23</a>
+        <a href="https://x.com/VioletaHNews" target="_blank" class="twitter-account">@VioletaHNews</a>
+        <a href="https://x.com/violetalatam" target="_blank" class="twitter-account">@violetalatam</a>
+    </div>
+</section>
+
+<!-- Footer con enlaces y redes sociales -->
+<footer>
+    <div class="footer-content">
+        <p>© 2024 VIOLETA - Fanpage</p>
+    </div>
+    <div class="footer-page">
+        <!-- <a href="https://violetaoficial.com" target="_blank">Página Oficial</a> -->
+        Página Oficial
+    </div>
+    <div class="footer-social-icons">
+        <a href="https://www.instagram.com/violetahodar" target="_blank">
+            <img src="assets/instagram-icon.png" alt="Instagram">
+        </a>
+        <a href="https://x.com/HFVioleta" target="_blank">
+            <img src="assets/twitter-icon.png" alt="Twitter">
+        </a>
+        <a href="https://www.tiktok.com/@hodarvioleta" target="_blank">
+            <img src="assets/tiktok-icon.png" alt="TikTok">
+        </a>
+        <a href="https://whatsapp.com/channel/0029VajuudwBqbrGLRqDPw2P" target="_blank">
+            <img src="assets/whatsapp-icon.png" alt="WhatsApp">
+        </a>
+    </div>
+</footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/mapfans.js"></script> <!-- Asegúrate de cargar esto al final -->
+</body>
+</html>

@@ -35,7 +35,7 @@
             <li><a href="noticias.html">Noticias</a></li>
             <li><a href="musica.html">Música</a></li>
             <li><a href="gira.html">Gira</a></li>
-            <li><a href="proximamente.html">Zona-Fan</a></li>
+            <li><a href="zonafan.html">Zona-Fan</a></li>
             <li><a href="contacto.html">Contacto</a></li>
         </ul>
     </nav>
@@ -103,11 +103,10 @@
 <!-- Zona de Fans (Preview) -->
 <section class="zona-fans">
     <h2>Zona Fan</h2>
-    <p>¡PRÓXIMAMENTE!</p>
-   <!--  
-    <p>Explora el mapa interactivo y comparte desde dónde sigues a Violeta. ¡Haz clic en tu ubicación para unirte a la comunidad!</p>
-    <div id="mapa-zonafan" class="mapa-container"></div>
-    <a href="zonafan.html" class="cta-button">Visitar Zona Fan</a>-->
+   <!--  <p>¡PRÓXIMAMENTE!</p>-->
+   <p>¡Participa en las actividades del fandom y forma parte de esta gran comunidad!</p>
+    <div id="mapa-fans" class="mapa-container"></div>
+    <a href="zonafan.html" class="cta-button">Visitar Zona Fan</a>
 </section>
 
 <!-- Footer con enlaces y redes sociales -->
@@ -135,7 +134,8 @@
     </div>
 </footer>
 
-    <script src="js/nav.js"></script>
-    <script src="js/lunarTrail.js" defer></script>
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/mapfans.js"></script>
 </body>
 </html>

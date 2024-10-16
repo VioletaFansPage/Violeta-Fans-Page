@@ -171,13 +171,13 @@ iframe {
     text-align: center; /* Centrar el título */
 }
 
-#mapa-container {
+#mapa-fans {
     height: 400px;
     width: 90%; /* Ajuste para que ocupe menos del ancho total */
     max-width: 600px; /* Máximo ancho para reducir el tamaño */
     margin: 0 auto; /* Centramos el mapa */
     border-radius: 10px;
-    margin-bottom: 50px; /* Espacio entre el mapa y el botón */
+    border: 0.25px solid var(--azul-oscuro);
 }
 
 .zona-fans p {

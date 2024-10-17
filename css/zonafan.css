@@ -28,7 +28,15 @@
     nav ul.show {
         max-height: 500px; /* Ajusta esto según sea necesario */
     }
+    /* Más espacio al primer elemento del menú */
+    nav ul li:first-child {
+        margin-top: 20px; /* Espacio entre el icono del menú y el primer elemento */
+    }
 
+    /* Más espacio al último elemento del menú */
+    nav ul li:last-child {
+        margin-bottom: 20px; /* Espacio tras el último elemento */
+    }
     .menu-toggle {
         display: flex;
         z-index: 11; /* Asegúrate de que el botón también esté por encima */

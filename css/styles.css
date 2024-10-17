@@ -65,7 +65,7 @@ nav ul.show {
 nav ul li a {
     text-decoration: none;
     color: var(--azul-claro); /* Cambiar el color del texto */
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500;
     text-transform: lowercase;
     padding: 10px 15px; /* Agregar un poco de padding para mejor clickabilidad */
@@ -124,11 +124,15 @@ nav ul li a:hover {
     nav ul.show {
         max-height: 500px; /* Ajusta esto según sea necesario */
     }
-
-    nav ul li {
-        width: 100%;
+    /* Más espacio al primer elemento del menú */
+    nav ul li:first-child {
+        margin-top: 20px; /* Espacio entre el icono del menú y el primer elemento */
     }
 
+    /* Más espacio al último elemento del menú */
+    nav ul li:last-child {
+        margin-bottom: 20px; /* Espacio tras el último elemento */
+    }
     .menu-toggle {
         display: flex;
         z-index: 11; /* Asegúrate de que el botón también esté por encima */

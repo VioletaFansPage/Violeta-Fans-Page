@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const modal = document.getElementById("modal-form");
     const btnAddCity = document.getElementById("btn-add-city");
-    const spanCloseMap = document.getElementsByClassName("close-map")[0]; // Cambia a close-map
+    const spanCloseMap = document.getElementsByClassName("close-map")[0];
     const form = document.getElementById("fan-form");
 
     // Abrir el modal al hacer clic en "Participar"

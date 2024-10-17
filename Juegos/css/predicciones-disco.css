@@ -1,0 +1,154 @@
+/* Reseteo de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #dfe9f3;
+    color: #1a2b4e;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 900px; /* Ampliar el ancho del recuadro */
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Títulos y subtítulos */
+  h1 {
+    text-align: center;
+    color: #004e92;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #0072bb;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  
+  /* Botón "Participa ahora" centrado */
+  .centered {
+    text-align: center;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background-color: #004e92;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
+  
+  .cta-button:hover {
+    background-color: #0072bb;
+  }
+  
+/* Información oficial del disco centrada */
+.official-info {
+    background-color: #f1f9ff;
+    border-left: 5px solid #004e92;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .official-info h3 {
+    font-size: 20px;
+    color: #004e92;
+  }
+  
+  .official-info .tracklist {
+    text-align: center;
+  }
+  
+  .official-info .tracklist p {
+    margin: 5px 0;
+  }
+  
+  
+  /* Predicciones de fans en formato grid */
+  .predictions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas por fila */
+    gap: 20px;
+  }
+  
+  .prediction-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  .user-info {
+    margin-bottom: 10px;
+  }
+  
+  .user-info p {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .user-info a {
+    margin: 0 10px;
+    color: #004e92;
+    font-size: 18px;
+  }
+  
+  .user-info img {
+    width: 15px; /* Establece un ancho uniforme para los iconos */
+    height: auto; /* Mantiene la relación de aspecto */
+    margin: 0 5px; /* Espacio horizontal entre los iconos */
+    vertical-align: middle; /* Alinea verticalmente con el texto */
+}
+
+
+  .tracklist {
+    margin-top: 15px;
+  }
+  
+  .toggle-tracklist {
+    background-color: #004e92;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .toggle-tracklist:hover {
+    background-color: #0072bb;
+  }
+  
+  /* Botón de volver atrás */
+  .back-button-container {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  #backButton {
+    font-size: 24px;
+    color: #1a2b4e;
+    text-decoration: none;
+  }
+  

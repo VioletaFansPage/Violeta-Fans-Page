@@ -13,8 +13,6 @@
     <link rel="icon" href="assets/favicon.ico">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" crossorigin=""/>
 </head>
 <body id="top">
 
@@ -35,7 +33,7 @@
             <li><a href="noticias.html">Noticias</a></li>
             <li><a href="musica.html">Música</a></li>
             <li><a href="gira.html">Gira</a></li>
-            <li><a href="zonafan.html">Zona-Fan</a></li>
+            <li><a href="zonafan.html">Zona Fan</a></li>
             <li><a href="contacto.html">Contacto</a></li>
         </ul>
     </nav>
@@ -105,7 +103,11 @@
     <h2>Zona Fan</h2>
    <!--  <p>¡PRÓXIMAMENTE!</p>-->
    <p>¡Participa en las actividades del fandom y forma parte de esta gran comunidad!</p>
-    <div id="mapa-fans" class="mapa-container"></div>
+   <!-- <div id="mapa-fans" class="mapa-container"></div>-->
+   <div class="mapa-container">
+    <iframe src="https://www.google.com/maps/d/embed?mid=1KlDD9NznQnT0zayMjUvWBPvZfejRTms&ehbc=2E312F" width="640" height="480"></iframe>
+   </div>
+   
     <a href="zonafan.html" class="cta-button">Visitar Zona Fan</a>
 </section>
 
@@ -133,9 +135,6 @@
         </a>
     </div>
 </footer>
-
-<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 <script src="js/nav.js"></script>
-<script src="js/mapfans.js"></script>
 </body>
 </html>
